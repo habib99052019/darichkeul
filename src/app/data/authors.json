@@ -1,0 +1,138 @@
+[
+    {
+        "id": 1,
+        "img": "assets/img/testimonial/01.png",
+        "name": "Mohamed Amous",
+        "designation": "Founder, qux co.",
+        "shotdesc": "Nous avons passé le week-end dernier un séjour en famille dans cette merveilleuse maison d hotes. L'accueil et le service sont à la hauteur de ce site exceptionnel.",
+        "longdescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation is enougn for today.",
+        "social": [{
+                "icon": "fab fa-facebook-f",
+                "title": "Facebook",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-twitter",
+                "title": "Twitter",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-behance",
+                "title": "Behance",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-linkedin",
+                "title": "Linked In",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-youtube",
+                "title": "YouTube",
+                "url": "www.domain.com/username"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "img": "assets/img/testimonial/02.png",
+        "name": "Sarra Mihoub",
+        "designation": "Founder, hilix",
+        "shotdesc": "Une belle surprise sur la région de Bizerte pour moi j'adore l'endroit reste à voir sur place 😍.",
+        "longdescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation is enougn for today.",
+        "social": [{
+                "icon": "fab fa-facebook-f",
+                "title": "Facebook",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-twitter",
+                "title": "Twitter",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-behance",
+                "title": "Behance",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-linkedin",
+                "title": "Linked In",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-youtube",
+                "title": "YouTube",
+                "url": "www.domain.com/username"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "img": "assets/img/testimonial/03.png",
+        "name": "Ahlem Amara",
+        "designation": "Founder, Condo",
+        "shotdesc": " un endroit féérique et un service hors norme, top.",
+        "longdescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation is enougn for today.",
+        "social": [{
+                "icon": "fab fa-facebook-f",
+                "title": "Facebook",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-twitter",
+                "title": "Twitter",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-behance",
+                "title": "Behance",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-linkedin",
+                "title": "Linked In",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-youtube",
+                "title": "YouTube",
+                "url": "www.domain.com/username"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "img": "assets/img/testimonial/04.png",
+        "name": "Khédija Siala Bouassida",
+        "designation": "Founder, hilix",
+        "shotdesc": "On a fait l'expérience et c'était Magnifique vraiment exceptionnel.",
+        "longdescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation is enougn for today.",
+        "social": [{
+                "icon": "fab fa-facebook-f",
+                "title": "Facebook",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-twitter",
+                "title": "Twitter",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-behance",
+                "title": "Behance",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-linkedin",
+                "title": "Linked In",
+                "url": "www.domain.com/username"
+            },
+            {
+                "icon": "fab fa-youtube",
+                "title": "YouTube",
+                "url": "www.domain.com/username"
+            }
+        ]
+    }
+]

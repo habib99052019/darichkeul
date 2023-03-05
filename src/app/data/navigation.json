@@ -1,0 +1,77 @@
+[{
+        "id": 1,
+        "linkText": "Accueil",
+        "link": "/"
+    },
+    {
+        "id": 2,
+        "linkText": "À propos",
+        "link": "/about"
+    },
+    {
+        "id": 3,
+        "linkText": "Nos suites",
+        "link": "/room-grid"
+    },{
+        "id": 4,
+        "linkText": "Notre cuisine",
+        "link": "/contact"
+    },
+    {
+        "id": 5,
+        "linkText": "Nos activités",
+        "link": "/contact"
+    },
+    {
+        "id": 6,
+        "linkText": "Contact",
+        "link": "/contact"
+    },
+    {
+        "id": 7,
+        "linkText": "Pages",
+        "child": true,
+        "submenu": [{
+                "id": 61,
+                "link": "/gallery",
+                "linkText": "Our Gallery"
+            },
+            {
+                "id": 62,
+                "link": "/restaurant",
+                "linkText": "Restaurant"
+            },
+            {
+                "id": 63,
+                "linkText": "Places",
+                "child": true,
+                "submenu": [{
+                        "id": 631,
+                        "link": "/places",
+                        "linkText": "Places"
+                    },
+                    {
+                        "id": 632,
+                        "link": "/places-details/1",
+                        "linkText": "Places Details"
+                    }
+                ]
+            },
+            {
+                "id": 64,
+                "link": "/offers",
+                "linkText": "Offers"
+            },
+            {
+                "id": 65,
+                "link": "/menu",
+                "linkText": "Menu"
+            },
+            {
+                "id": 66,
+                "link": "/error-page",
+                "linkText": "Error 404"
+            }
+        ]
+    }
+]

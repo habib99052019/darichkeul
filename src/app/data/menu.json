@@ -1,0 +1,67 @@
+[{
+        "id": 1,
+        "img": "assets/img/menu/01.jpg",
+        "title": "Agneau à la gargoulette",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": 2,
+        "img": "assets/img/menu/02.jpg",
+        "title": "Côtelette d'agneau grillée",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": 3,
+        "img": "assets/img/menu/03.jpg",
+        "title": "Entrecôte grillée beurre",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": 4,
+        "img": "assets/img/menu/04.jpg",
+        "title": "Filet de boeuf",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": 5,
+        "img": "assets/img/menu/05.jpg",
+        "title": "Grillades mixtes",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": 6,
+        "img": "assets/img/menu/06.jpg",
+        "title": "Cailles grillées",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": 7,
+        "img": "assets/img/menu/07.jpg",
+        "title": "Escalope de poulet à la crème",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": 8,
+        "img": "assets/img/menu/08.jpg",
+        "title": "Escalope de poulet panée",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": 9,
+        "img": "assets/img/menu/09.jpg",
+        "title": "Ojja Merguez",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": 10,
+        "img": "assets/img/menu/10.jpg",
+        "title": "Ojja crevettes",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    },
+    {
+        "id": 10,
+        "img": "assets/img/menu/11.jpg",
+        "title": "Les pâtes",
+        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor."
+    }
+]

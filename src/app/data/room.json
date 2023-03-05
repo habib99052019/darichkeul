@@ -1,0 +1,679 @@
+[
+    {
+        "id": 1 ,
+        "title": "Bonnelli",
+        "price": 210,
+        "period": "Nuit",
+        "category": [
+            1
+        ],
+        "gridimage": "assets/img/photos_new_content/bonneli/bonneli.jpg",
+        "listimage": "assets/img/photos_new_content/bonneli/bonneli.jpg",
+        "sliderimage": ["assets/img/photos_new_content/bonneli/bonneli.jpg","assets/img/photos_new_content/bonneli/bonneli_2.jpg","assets/img/photos_new_content/bonneli/bonneli_5.jpg","assets/img/photos_new_content/bonneli/bonneli_6.jpg"],
+        "text": "Suite Vue sur le Jardin",
+        "longdesc": "<p>Isolez-vous en toute tranquillité dans cet espace lumineux où seul le chant des oiseaux vient interrompre le silence</p>",
+        "authors": [
+            1,
+            2
+        ],
+        "amenities": [
+            {
+                "title": "Climatiseur",
+                "icon": "fa-solid fa-temperature-three-quarters"
+            },
+            {
+                "title": "Wi-Fi haut débit",
+                "icon": "fa-solid fa-wifi"
+            },
+            {
+                "title": "Casier fort",
+                "icon": "fa-solid fa-key"
+            },
+            {
+                "title": "Petit-déjeuner",
+                "icon": "fa-solid fa-utensils"
+            },
+            {
+                "title": "Cuisine",
+                "icon": "fa-solid fa-fire-burner"
+            },
+            {
+                "title": "Sécurité intelligente",
+                "icon": "fa-solid fa-house-lock"
+            },
+            {
+                "title": "Nettoyage",
+                "icon": "fa-solid fa-broom"
+            },
+            {
+                "title": "Douche",
+                "icon": "fa-solid fa-shower"
+            },
+            {
+                "title": "24/7 Support en ligne",
+                "icon": "fa-solid fa-headset"
+            },
+
+
+            {
+                "title": "Équipe d'experts",
+                "icon": "fa-solid fa-users"
+            },
+
+            {
+                "title": "Les serviettes",
+                "icon": "fa-solid fa-bath"
+            }
+        ],
+        "rules": [
+            "Chambre Single/ Haute saison : 280 DT/Nuit ",
+            "Chambre Single/ Basse saison : 210 DT/Nuit ",
+            "Chambre Double/ Basse saison : 280 DT/Nuit ",
+            "Chambre Double/ Haute saison : 350 DT/Nuit "
+
+        ],
+        "cancellation": "Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. <strong>Cancel up</strong> to <strong>14 days</strong> to get a full refund",
+        "location": [
+            31.53912, -89.29163
+        ],
+        "prixChambres": [
+           
+            "Chambre Single : 210 DT/Nuit ",
+            "Chambre Double : 280 DT/Nuit "
+           
+        ],
+        "offer": true
+    },
+    {
+        "id": 2,
+        "title": "Cigogne",
+        "price": 265,
+        "period": "Nuit",
+        "category": [
+            2
+        ],
+        "gridimage": "assets/img/photos_new_content/cigogne/IMG_6918.jpg",
+        "listimage": "assets/img/photos_new_content/cigogne/IMG_6918.jpg",
+        "sliderimage": ["assets/img/photos_new_content/cigogne/IMG_6918.jpg","assets/img/photos_new_content/cigogne/IMG_6919.jpg","assets/img/photos_new_content/cigogne/IMG_6921.jpg","assets/img/photos_new_content/cigogne/IMG_6923.jpg","assets/img/photos_new_content/cigogne/IMG_6925.jpg","assets/img/photos_new_content/cigogne/IMG_6926.jpg"],
+        "text": "Suite Standard Vue sur la Ferme",
+        "longdesc": "<p>Réveillez-vous au son du silence et en admirant des levers de soleil spectaculaires</p>",
+        "authors": [
+            3,
+            4
+        ],
+        "amenities": [
+            {
+                "title": "Climatiseur",
+                "icon": "fa-solid fa-temperature-three-quarters"
+            },
+            {
+                "title": "Wi-Fi haut débit",
+                "icon": "fa-solid fa-wifi"
+            },
+            {
+                "title": "Casier fort",
+                "icon": "fa-solid fa-key"
+            },
+            {
+                "title": "Petit-déjeuner",
+                "icon": "fa-solid fa-utensils"
+            },
+            {
+                "title": "Cuisine",
+                "icon": "fa-solid fa-fire-burner"
+            },
+            {
+                "title": "Sécurité intelligente",
+                "icon": "fa-solid fa-house-lock"
+            },
+            {
+                "title": "Nettoyage",
+                "icon": "fa-solid fa-broom"
+            },
+            {
+                "title": "Douche",
+                "icon": "fa-solid fa-shower"
+            },
+            {
+                "title": "24/7 Support en ligne",
+                "icon": "fa-solid fa-headset"
+            },
+
+
+            {
+                "title": "Équipe d'experts",
+                "icon": "fa-solid fa-users"
+            },
+
+            {
+                "title": "Les serviettes",
+                "icon": "fa-solid fa-bath"
+            }
+        ],
+        "rules": [
+            "Chambre Single/ Haute saison : 335 DT/Nuit ",
+            "Chambre Single/ Basse saison : 265 DT/Nuit ",
+            "Chambre Double/ Basse saison : 335 DT/Nuit ",
+            "Chambre Double/ Haute saison : 405 DT/Nuit "
+        ],
+        "cancellation": "Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. <strong>Cancel up</strong> to <strong>14 days</strong> to get a full refund",
+        "location": [
+            31.53912, -89.29163
+        ],
+        "prixChambres": [
+           
+            "Chambre Single : 265 DT/Nuit ",
+            "Chambre Double : 335 DT/Nuit "
+           
+        ],
+        "offer": true
+    },
+    {
+        "id": 3,
+        "title": "Amorpha",
+        "price": 245,
+        "period": "Nuit",
+        "category": [
+            3
+        ],
+        "gridimage": "assets/img/photos_new_content/amorpha/amorpha_1.jpg",
+        "listimage": "assets/img/photos_new_content/amorpha/amorpha_1.jpg",
+        "sliderimage": ["assets/img/photos_new_content/amorpha/amorpha_1.jpg","assets/img/photos_new_content/amorpha/amorpha_2.jpg","assets/img/photos_new_content/amorpha/amorpha_3.jpg","assets/img/photos_new_content/amorpha/amorpha_6.jpg"],
+        "text": "Suite avec Jacuzzi",
+        "longdesc": "<p>Avec sa Jacuzzi, profitez du calme en vous offrant tout le confort dont vous avez besoin</p>",
+        "authors": [
+            1,
+            2
+        ],
+        "amenities": [
+            {
+                "title": "Climatiseur",
+                "icon": "fa-solid fa-temperature-three-quarters"
+            },
+            {
+                "title": "Wi-Fi haut débit",
+                "icon": "fa-solid fa-wifi"
+            },
+            {
+                "title": "Casier fort",
+                "icon": "fa-solid fa-key"
+            },
+            {
+                "title": "Petit-déjeuner",
+                "icon": "fa-solid fa-utensils"
+            },
+            {
+                "title": "Cuisine",
+                "icon": "fa-solid fa-fire-burner"
+            },
+            {
+                "title": "Sécurité intelligente",
+                "icon": "fa-solid fa-house-lock"
+            },
+            {
+                "title": "Nettoyage",
+                "icon": "fa-solid fa-broom"
+            },
+            {
+                "title": "Douche",
+                "icon": "fa-solid fa-shower"
+            },
+            {
+                "title": "24/7 Support en ligne",
+                "icon": "fa-solid fa-headset"
+            },
+
+
+            {
+                "title": "Équipe d'experts",
+                "icon": "fa-solid fa-users"
+            },
+
+            {
+                "title": "Les serviettes",
+                "icon": "fa-solid fa-bath"
+            }
+        ],
+        "rules": [
+            "Chambre Single/ Haute saison : 315 DT/Nuit ",
+            "Chambre Single/ Basse saison : 245 DT/Nuit ",
+            "Chambre Double/ Basse saison : 315 DT/Nuit ",
+            "Chambre Double/ Haute saison : 385 DT/Nuit "
+        ],
+        "cancellation": "Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. <strong>Cancel up</strong> to <strong>14 days</strong> to get a full refund.",
+        "location": [
+            31.53912, -89.29163
+        ],
+        "prixChambres": [
+           
+            "Chambre Single : 245 DT/Nuit ",
+            "Chambre Double : 315 DT/Nuit "
+           
+        ],
+        "offer": false
+    },
+    {
+        "id": 4,
+        "title": "Ruppia",
+        "price": 245,
+        "period": "Nuit",
+        "category": [
+            4
+        ],
+        "gridimage": "assets/img/photos_new_content/ruppia/ruppia_2.jpg",
+        "listimage": "assets/img/photos_new_content/ruppia/IMG_2438.jpg",
+        "sliderimage": ["assets/img/photos_new_content/ruppia/IMG_2438.jpg","assets/img/photos_new_content/ruppia/IMG_5023.jpg","assets/img/photos_new_content/ruppia/ruppia_2.jpg"],
+        "text": "Suite avec Jacuzzi Vue sur la Piscine",
+        "longdesc": "<p>Une suite dotée d'un Jacuzzi offrant une vue imprenable sur la piscine qui sera vous séduire par le style raffiné et luxueux</p>",
+        "authors": [
+            3,
+            4
+        ],
+        "amenities": [
+            {
+                "title": "Climatiseur",
+                "icon": "fa-solid fa-temperature-three-quarters"
+            },
+            {
+                "title": "Wi-Fi haut débit",
+                "icon": "fa-solid fa-wifi"
+            },
+            {
+                "title": "Casier fort",
+                "icon": "fa-solid fa-key"
+            },
+            {
+                "title": "Petit-déjeuner",
+                "icon": "fa-solid fa-utensils"
+            },
+            {
+                "title": "Cuisine",
+                "icon": "fa-solid fa-fire-burner"
+            },
+            {
+                "title": "Sécurité intelligente",
+                "icon": "fa-solid fa-house-lock"
+            },
+            {
+                "title": "Nettoyage",
+                "icon": "fa-solid fa-broom"
+            },
+            {
+                "title": "Douche",
+                "icon": "fa-solid fa-shower"
+            },
+            {
+                "title": "24/7 Support en ligne",
+                "icon": "fa-solid fa-headset"
+            },
+
+
+            {
+                "title": "Équipe d'experts",
+                "icon": "fa-solid fa-users"
+            },
+
+            {
+                "title": "Les serviettes",
+                "icon": "fa-solid fa-bath"
+            }
+        ],
+        "rules": [
+            "Chambre Single/ Haute saison : 315 DT/Nuit ",
+            "Chambre Single/ Basse saison : 245 DT/Nuit ",
+            "Chambre Double/ Basse saison : 315 DT/Nuit ",
+            "Chambre Double/ Haute saison : 385 DT/Nuit "
+        ],
+        "cancellation": "Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. <strong>Cancel up</strong> to <strong>14 days</strong> to get a full refund.",
+        "location": [
+            31.53912, -89.29163
+        ],
+        "prixChambres": [
+           
+            "Chambre Single : 245 DT/Nuit ",
+            "Chambre Double : 315 DT/Nuit ",
+            " + Lit supplémentaire : 405 DT/Nuit "
+            
+        ],
+        "offer": true
+    },
+    {
+        "id": 5,
+        "title": "Ciconia",
+        "price": 230,
+        "period": "Nuit",
+        "category": [
+            5
+        ],
+
+        "gridimage": "assets/img/photos_new_content/Ciconia/C85A6393.jpg",
+        "listimage": "assets/img/photos_new_content/Ciconia/C85A6393.jpg",
+        "sliderimage": ["assets/img/photos_new_content/Ciconia/C85A6393.jpg"],
+        "text": "Suite Standard avec Terrasse",
+        "longdesc": "<p>Avec sa terrasse privée, le regard s’attarde sur chaque détail à l'extrême raffinement</p>",
+        "authors": [
+            1,
+            2
+        ],
+        "amenities": [
+            {
+                "title": "Climatiseur",
+                "icon": "fa-solid fa-temperature-three-quarters"
+            },
+            {
+                "title": "Wi-Fi haut débit",
+                "icon": "fa-solid fa-wifi"
+            },
+            {
+                "title": "Casier fort",
+                "icon": "fa-solid fa-key"
+            },
+            {
+                "title": "Petit-déjeuner",
+                "icon": "fa-solid fa-utensils"
+            },
+            {
+                "title": "Cuisine",
+                "icon": "fa-solid fa-fire-burner"
+            },
+            {
+                "title": "Sécurité intelligente",
+                "icon": "fa-solid fa-house-lock"
+            },
+            {
+                "title": "Nettoyage",
+                "icon": "fa-solid fa-broom"
+            },
+            {
+                "title": "Douche",
+                "icon": "fa-solid fa-shower"
+            },
+            {
+                "title": "24/7 Support en ligne",
+                "icon": "fa-solid fa-headset"
+            },
+
+
+            {
+                "title": "Équipe d'experts",
+                "icon": "fa-solid fa-users"
+            },
+
+            {
+                "title": "Les serviettes",
+                "icon": "fa-solid fa-bath"
+            }
+        ],
+        "rules": [
+            "Chambre Single/ Haute saison : 300 DT/Nuit ",
+            "Chambre Single/ Basse saison : 230 DT/Nuit ",
+            "Chambre Double/ Basse saison : 300 DT/Nuit ",
+            "Chambre Double/ Haute saison : 370 DT/Nuit "
+        ],
+        "cancellation": "Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. <strong>Cancel up</strong> to <strong>14 days</strong> to get a full refund.",
+        "location": [
+            31.53912, -89.29163
+        ],
+        "prixChambres": [
+           
+            "Chambre Single : 230 DT/Nuit ",
+            "Chambre Double : 300 DT/Nuit "
+           
+        ],
+        "offer": false
+    },
+    {
+        "id": 6,
+        "title": "Colony",
+        "price": 385,
+        "period": "Nuit",
+        "category": [
+            2
+        ],
+
+        "gridimage": "assets/img/photos_new_content/colony/colony_3.jpg",
+        "listimage": "assets/img/photos_new_content/colony/colony_3.jpg",
+        "sliderimage": ["assets/img/photos_new_content/colony/colony_3.jpg","assets/img/photos_new_content/colony/colony_4.jpg","assets/img/photos_new_content/colony/IMG-0710.jpg"],
+        "text": "Suite De Luxe avec Vue panoramique",
+        "longdesc": "<p>Une suite moderne et luxueuse baignée de lumière naturelle, offrant un intérieur chaleureux et apaisant avec un fabuleux paysage, vous permet de contempler la beauté de la ville, de jour comme de nuit</p>",
+        "authors": [
+            3,
+            4
+        ],
+        "amenities": [
+            {
+                "title": "Climatiseur",
+                "icon": "fa-solid fa-temperature-three-quarters"
+            },
+            {
+                "title": "Wi-Fi haut débit",
+                "icon": "fa-solid fa-wifi"
+            },
+            {
+                "title": "Casier fort",
+                "icon": "fa-solid fa-key"
+            },
+            {
+                "title": "Petit-déjeuner",
+                "icon": "fa-solid fa-utensils"
+            },
+            {
+                "title": "Cuisine",
+                "icon": "fa-solid fa-fire-burner"
+            },
+            {
+                "title": "Sécurité intelligente",
+                "icon": "fa-solid fa-house-lock"
+            },
+            {
+                "title": "Nettoyage",
+                "icon": "fa-solid fa-broom"
+            },
+            {
+                "title": "Douche",
+                "icon": "fa-solid fa-shower"
+            },
+            {
+                "title": "24/7 Support en ligne",
+                "icon": "fa-solid fa-headset"
+            },
+
+
+            {
+                "title": "Équipe d'experts",
+                "icon": "fa-solid fa-users"
+            },
+
+            {
+                "title": "Les serviettes",
+                "icon": "fa-solid fa-bath"
+            }
+        ],
+        "rules": [
+            "Chambre Single/ Haute saison : 455 DT/Nuit ",
+            "Chambre Single/ Basse saison : 385 DT/Nuit ",
+            "Chambre Double/ Basse saison : 455 DT/Nuit ",
+            "Chambre Double/ Haute saison : 525 DT/Nuit "
+        ],
+        "cancellation": "Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. <strong>Cancel up</strong> to <strong>14 days</strong> to get a full refund.",
+        "location": [
+            31.53912, -89.29163
+        ],
+        "prixChambres": [
+           
+            "Chambre Single : 385 DT/Nuit ",
+            "Chambre Double : 455 DT/Nuit ",
+            "+ Lit supplémentaire : 535 DT/Nuit ",
+            "+ Lit supplémentaire : 625 DT/Nuit "
+        ],
+        "offer": true
+    },
+    {
+        "id": 7,
+        "title": "Marabou",
+        "price": 300,
+        "period": "Nuit",
+        "category": [
+            2
+        ],
+        "gridimage": "https://images.bestwestern.com/bwi/brochures/93610/photos/1024/26029126.jpg",
+        "listimage": "https://images.bestwestern.com/bwi/brochures/93610/photos/1024/26029126.jpg",
+        "sliderimage": ["https://images.bestwestern.com/bwi/brochures/93610/photos/1024/26029126.jpg","https://www.dispano.fr/sites/default/files/2022-08/salle-de-bain-panneau-mural-solution-esthetique-economique-banniere-une-dispano.jpg"],
+        "text": "Suite Vue sur la Piscine",
+        "longdesc": "<p>Une suite vue sur la Piscine vous offre le calme et la beauté de la nature</p>",
+        "authors": [
+            3,
+            4
+        ],
+        "amenities": [
+            {
+                "title": "Climatiseur",
+                "icon": "fa-solid fa-temperature-three-quarters"
+            },
+            {
+                "title": "Wi-Fi haut débit",
+                "icon": "fa-solid fa-wifi"
+            },
+            {
+                "title": "Casier fort",
+                "icon": "fa-solid fa-key"
+            },
+            {
+                "title": "Petit-déjeuner",
+                "icon": "fa-solid fa-utensils"
+            },
+            {
+                "title": "Cuisine",
+                "icon": "fa-solid fa-fire-burner"
+            },
+            {
+                "title": "Sécurité intelligente",
+                "icon": "fa-solid fa-house-lock"
+            },
+            {
+                "title": "Nettoyage",
+                "icon": "fa-solid fa-broom"
+            },
+            {
+                "title": "Douche",
+                "icon": "fa-solid fa-shower"
+            },
+            {
+                "title": "24/7 Support en ligne",
+                "icon": "fa-solid fa-headset"
+            },
+
+
+            {
+                "title": "Équipe d'experts",
+                "icon": "fa-solid fa-users"
+            },
+
+            {
+                "title": "Les serviettes",
+                "icon": "fa-solid fa-bath"
+            }
+        ],
+        "rules": [
+            "Chambre Single/ Haute saison : 370 DT/Nuit ",
+            "Chambre Single/ Basse saison : 300 DT/Nuit ",
+            "Chambre Double/ Basse saison : 370 DT/Nuit ",
+            "Chambre Double/ Haute saison : 440 DT/Nuit "
+        ],
+        "cancellation": "Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. <strong>Cancel up</strong> to <strong>14 days</strong> to get a full refund.",
+        "location": [
+            31.53912, -89.29163
+        ],
+        "prixChambres": [
+           
+             "Chambre Single/ Basse saison : 300 DT/Nuit ",
+             "Chambre Double/ Basse saison : 370 DT/Nuit "
+            
+        ],
+        "offer": true
+    },
+    {
+        "id": 8,
+        "title": "Brecon",
+        "price": 335,
+        "period": "Nuit",
+        "category": [
+            2
+        ],
+        "gridimage": "https://www.yonder.fr/sites/default/files/destinations/la%20badira%20Suite%20Cocteau%20chambre.jpg",
+        "listimage": "https://www.yonder.fr/sites/default/files/destinations/la%20badira%20Suite%20Cocteau%20chambre.jpg",
+        "sliderimage": ["https://www.yonder.fr/sites/default/files/destinations/la%20badira%20Suite%20Cocteau%20chambre.jpg","https://djwn2awl267ga.cloudfront.net/cache/img/maison-mere-suite-reine-mere-ecran-ultra-hd-119340-1920-1080-auto.jpg?q=1664286121"],
+        "text": "Suite De Luxe avec Vue panoramique",
+        "longdesc": "<p>Suite De Luxe avec Vue panoramique un suite moderne et luxueux baigné de lumière naturelle, offrant un intérieur chaleureux et apaisant avec un fabuleux paysage, vous permet de contempler la beauté de la ville, de jour comme de nuit</p>",
+        "authors": [
+            3,
+            4
+        ],
+        "amenities": [
+            {
+                "title": "Climatiseur",
+                "icon": "fa-solid fa-temperature-three-quarters"
+            },
+            {
+                "title": "Wi-Fi haut débit",
+                "icon": "fa-solid fa-wifi"
+            },
+            {
+                "title": "Casier fort",
+                "icon": "fa-solid fa-key"
+            },
+            {
+                "title": "Petit-déjeuner",
+                "icon": "fa-solid fa-utensils"
+            },
+            {
+                "title": "Cuisine",
+                "icon": "fa-solid fa-fire-burner"
+            },
+            {
+                "title": "Sécurité intelligente",
+                "icon": "fa-solid fa-house-lock"
+            },
+            {
+                "title": "Nettoyage",
+                "icon": "fa-solid fa-broom"
+            },
+            {
+                "title": "Douche",
+                "icon": "fa-solid fa-shower"
+            },
+            {
+                "title": "24/7 Support en ligne",
+                "icon": "fa-solid fa-headset"
+            },
+
+
+            {
+                "title": "Équipe d'experts",
+                "icon": "fa-solid fa-users"
+            },
+
+            {
+                "title": "Les serviettes",
+                "icon": "fa-solid fa-bath"
+            }
+        ],
+        "rules": [
+            "Chambre Single/ Haute saison : 405 DT/Nuit ",
+            "Chambre Single/ Basse saison : 335 DT/Nuit ",
+            "Chambre Double/ Basse saison : 405 DT/Nuit ",
+            "Chambre Double/ Haute saison : 475 DT/Nuit "
+        ],
+        "cancellation": "Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. <strong>Cancel up</strong> to <strong>14 days</strong> to get a full refund.",
+        "location": [
+            31.53912, -89.29163
+        ],
+        "prixChambres": [
+           
+            "Chambre Single :335 DT/Nuit ",
+            "Chambre Double : 405 DT/Nuit "
+            
+        ],
+        "offer": true
+    }
+]

@@ -1,0 +1,33 @@
+[{
+        "id": 1,
+        "img": "assets/img/equitation/01.jpg"
+    },
+    {
+        "id": 2,
+        "img": "assets/img/equitation/02.jpg"
+    },
+    {
+        "id": 3,
+        "img": "assets/img/equitation/03.jpg"
+    },
+    {
+        "id": 4,
+        "img": "assets/img/equitation/04.jpg"
+    },
+    {
+        "id": 5,
+        "img": "assets/img/equitation/05.jpg"
+    },
+    {
+        "id": 6,
+        "img": "assets/img/equitation/06.jpg"
+    },
+    {
+        "id": 7,
+        "img": "assets/img/equitation/07.jpg"
+    },
+    {
+        "id": 8,
+        "img": "assets/img/equitation/08.jpg"
+    }
+]

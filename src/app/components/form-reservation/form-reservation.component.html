@@ -1,0 +1,108 @@
+<form class="form1 clearfix">
+    <div class="row" *ngIf="!datesCompleted">
+        <div class="col-md-12">
+            <div class="input1_wrapper">
+                <label>Date d'arrivée</label>
+                <div class="input1_inner">
+                    <input [matDatepicker]="dateDebutReservMobile" [min]="todayDate" class="date-picker-no-show" (dateChange)="this.getDateDebutValue($event,dateDebutMobile)" [matDatepickerFilter]="DateNoDispoFilter"  placeholder="Date d'arrivée"  />
+                    <mat-datepicker-toggle [for]="dateDebutReservMobile"></mat-datepicker-toggle>
+                    <mat-datepicker #dateDebutReservMobile></mat-datepicker>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="input1_wrapper">
+                <label>Date de depart</label>
+                <div>
+                    <!--input type="date" id="dateDeb" class="form-control"
+                        placeholder="Date de depart" (change)="getValue($event)" -->
+                    <input [matDatepicker]="dateDebutReservMobile"  [min]="DateArr2" [max]="maxResvation" class="date-picker-no-show" [matDatepickerFilter]="DateNoDispoFilter" formControlName='date_depart' placeholder="Date d'arrivée"  />
+                    <mat-datepicker-toggle [for]="dateDebutReservMobile"></mat-datepicker-toggle>
+                    <mat-datepicker #dateDebutReservMobile></mat-datepicker>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="select1_wrapper">
+                <label>Adults</label>
+                <div class="select1_inner">
+                    <select class="select2 select" style="width: 100%">
+                        <option value="0">Adults</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="select1_wrapper">
+                <label>Children</label>
+                <div class="select1_inner">
+                    <select class="select2 select" style="width: 100%">
+                        <option value="0">Children</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <button type="submit" class="btn-form1-submit mt-15">Réserver</button>
+        </div>
+    </div>
+    <div class="row" *ngIf="datesCompleted">
+        <div class="col-md-12">
+            <div class="input1_wrapper">
+                <label>Date d'arrivée</label>
+                <div class="input1_inner">
+                    <input type="text" class="form-control input datepicker"
+                        placeholder="Date d'arrivée" onchange="getValue()" id="dateArrv">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="input1_wrapper">
+                <label>Date de depart</label>
+                <div class="input1_inner">
+                    <input type="text" class="form-control input datepicker"
+                        placeholder="Date de depart" id="dateDeb">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="select1_wrapper">
+                <label>Adults</label>
+                <div class="select1_inner">
+                    <select class="select2 select" style="width: 100%">
+                        <option value="0">Adults</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="select1_wrapper">
+                <label>Children</label>
+                <div class="select1_inner">
+                    <select class="select2 select" style="width: 100%">
+                        <option value="0">Children</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <button type="submit" class="btn-form1-submit mt-15">Réserver</button>
+        </div>
+    </div>
+</form>

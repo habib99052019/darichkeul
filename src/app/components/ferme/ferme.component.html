@@ -1,0 +1,285 @@
+<body>
+  <!-- Progress scroll totop -->
+  <div class="progress-wrap cursor-pointer">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Spa-Wellness Slider -->
+  <header class="header slider">
+    <div class="owl-carousel owl-theme">
+      <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/equitation/169819305_740302160017677_5655585245396388206_n.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/tennis/IMG_6716.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/les_slides/2d396e4f-86c9-4161-8d10-b06dded9ce67.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/equitation/196094469.jpg"></div>
+    </div>
+    <!-- arrow down -->
+    <div class="arrow bounce text-center">
+      <a href="#" data-scroll-nav="1" class=""> <i class="ti-arrow-down"></i> </a>
+    </div>
+  </header>
+  <!-- Spa-Wellness Content -->
+  <section class="rooms-page section-padding" data-scroll-index="1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"> <span><i class="star-rating"></i><i class="star-rating"></i><i
+              class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i></span>
+          <div class="section-subtitle">Dar ichkeul</div>
+          <div class="section-title">Notre ferme</div>
+          <p class="mb-30">
+            Au caractère rural et avec un grand enthousiasme pour tout ce qui est traditionnel, Dar ichkeul se présente comme la meilleure alternative pour se retrouver avec les saveurs de la terre et se sentir proche aux valeurs champêtres les plus chaleureuses et généreuses.
+            Fibres naturelles, couleurs vertes et air pur… Tout le monde adore la vie bucolique ! Il est toujours agréable d’avoir un endroit où se réfugier en quête d’un moment sain et tranquille.</p>
+        </div>
+        <div class="col-md-12">
+          <div class="reservations">
+            <div class="icon"><span class="flaticon-call"></span></div>
+            <div class="text">
+              <p>Réservations</p> <a href="tel:+21627595239">+216 27 595 239</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services -->
+  <section class="services section-padding">
+    <div class="container">
+        <div class="row" *ngFor="let item of actsList">
+            <div class="col-md-6 p-0 animate-box" *ngIf="item.position_image === 'left'" data-animate-effect="fadeInLeft">
+                <div class="img left">
+                    <a><img [src]="item.image" alt=""></a>
+                </div>
+            </div> 
+            <div class="col-md-6 p-0 bg-cream valign animate-box" *ngIf="item.position_image === 'left'" data-animate-effect="fadeInRight">
+                <div class="content">
+                    <div class="cont text-left">
+                        <div class="info">
+                            <h6>Dar ichkeul</h6>
+                        </div>
+                        <h4> {{item.title}} </h4>
+                        <p>{{item.description}}</p>
+                        <div class="butn-dark" *ngIf="item.title === 'RESTAURANT'"> <a href="/restaurant"><span>Learn More</span></a> </div>
+                        <div class="butn-dark" *ngIf="item.title != 'RESTAURANT'"> <a href="/activités"><span>Learn More</span></a> </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 bg-cream p-0 order2 valign animate-box" *ngIf="item.position_image === 'right'" data-animate-effect="fadeInLeft">
+                <div class="content">
+                    <div class="cont text-left">
+                        <div class="info">
+                            <h6>Dar ichkeul</h6>
+                        </div>
+                        <h4> {{item.title}} </h4>
+                        <p>{{item.description}}</p>
+                        <div class="butn-dark" *ngIf="item.title === 'RESTAURANT'"> <a href="/restaurant"><span>Learn More</span></a> </div>
+                        <div class="butn-dark" *ngIf="item.title != 'RESTAURANT'"> <a href="/activités"><span>Learn More</span></a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-0 order1 animate-box" *ngIf="item.position_image === 'right'" data-animate-effect="fadeInRight">
+                <div class="img">
+                    <a><img [src]="item.image" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!--div class="row">
+            <div class="col-md-6 bg-cream p-0 order2 valign animate-box" data-animate-effect="fadeInLeft">
+                <div class="content">
+                    <div class="cont text-left">
+                        <div class="info">
+                            <h6>Experiences</h6>
+                        </div>
+                        <h4>Spa Center</h4>
+                        <p>Spa center inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice
+                            misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami
+                            acsestion augue artine.</p>
+                        <div class="butn-dark"> <a href="spa-wellness.html"><span>Learn More</span></a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-0 order1 animate-box" data-animate-effect="fadeInRight">
+                <div class="img">
+                    <a href="spa-wellness.html"><img src="assets/img/spa/3.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 p-0 animate-box" data-animate-effect="fadeInLeft">
+                <div class="img left">
+                    <a href="spa-wellness.html"><img src="assets/img/spa/2.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-6 p-0 bg-cream valign animate-box" data-animate-effect="fadeInRight">
+                <div class="content">
+                    <div class="cont text-left">
+                        <div class="info">
+                            <h6>Modern</h6>
+                        </div>
+                        <h4>Fitness Center</h4>
+                        <p>Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice
+                            misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami
+                            acsestion augue artine.</p>
+                        <div class="butn-dark"> <a href="spa-wellness.html"><span>Learn More</span></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 bg-cream p-0 order2 valign animate-box" data-animate-effect="fadeInLeft">
+                <div class="content">
+                    <div class="cont text-left">
+                        <div class="info">
+                            <h6>Experiences</h6>
+                        </div>
+                        <h4>The Health Club & Pool</h4>
+                        <p>The health club & pool at elit finibus viverra nec a lacus themo the nesudea seneoice
+                            misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami
+                            acsestion augue artine.</p>
+                        <div class="butn-dark"> <a href="spa-wellness.html"><span>Learn More</span></a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-0 order1 animate-box" data-animate-effect="fadeInRight">
+                <div class="img">
+                    <a href="spa-wellness.html"><img src="assets/img/spa/1.jpg" alt=""></a>
+                </div>
+            </div>
+        </div-->
+    </div>
+  </section>
+  <!-- Faqs -->
+  <section class="section-padding bg-cream">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-subtitle">F.A.Qs</div>
+          <div class="section-title">Nos activités</div>
+        </div>
+        <div class="col-md-12">
+          <ul class="accordion-box clearfix">
+            <li class="accordion block">
+              <div class="acc-btn">RESTAURANT</div>
+              <div class="acc-content">
+                <div class="content">
+                  <div class="text">Le poulailler, la campagne, les cages… Chaque espace représente une ambiance champêtre et définit les caractéristiques propres de la vie agricole. Un défi des plus intéressants qui se relève merveilleusement grâce au jeu intense de couleurs, matériaux et textures.
+
+</div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion block">
+              <div class="acc-btn">PISCINE</div>
+              <div class="acc-content">
+                <div class="content">
+                  <div class="text"></div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion block">
+              <div class="acc-btn">EQUITATION</div>
+              <div class="acc-content">
+                <div class="content">
+                  <div class="text">Nous proposons  des balades  en montagne dans la région de Mateur.  Ce sont des chevaux adorables pour tous niveaux et tous âges ! Venez en famille, entre amis, ou même en amoureux…</div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion block">
+              <div class="acc-btn">TENNIS</div>
+              <div class="acc-content">
+                <div class="content">
+                  <div class="text"></div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion block">
+              <div class="acc-btn">RANDONNÉE</div>
+              <div class="acc-content">
+                <div class="content">
+                  <div class="text">Nos randonnées accompagnées sont placées sous le signe de la convivialité et de l’exploration. Que vous ayez envie de bien-être, de découverte ou d’aventure,Partez en petit groupe découvrir les richesses d’une région ou d’un massif. Nos guides locaux, experts de leurs territoires et amoureux de la nature partageront avec vous leurs mille et une connaissances.</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testiominals -->
+  <section class="testimonials">
+    <div class="background bg-img bg-fixed section-padding pb-0" data-background="assets/img/photos_new_content/les_slides/178483159_751807848867108_6722969823734392856_n.jpg"
+        data-overlay-dark="3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="testimonials-box">
+                        <div class="head-box">
+                            <h6>Témoignage</h6>
+                            <h4>Ce que nos clients disent de nous</h4>
+                            <div class="line"></div>
+                        </div>
+                        <div class="owl-carousel owl-theme">
+                            <div class="item" *ngFor="let item of testimonials">
+                                <span class="quote"><img src="assets/img/quot.png" alt=""></span>
+                                <p>{{item.description}}</p>
+                                <div class="info">
+                                    <div class="author-img"> <img [src]="item.image" alt=""> </div>
+                                    <div class="cont"> <span><i class="star-rating"></i><i
+                                                class="star-rating"></i><i class="star-rating"></i><i
+                                                class="star-rating"></i><i class="star-rating"></i></span>
+                                        <h6>{{item.name}}</h6> <span> {{item.profession}} </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--div class="item">
+                                <span class="quote"><img src="assets/img/quot.png" alt=""></span>
+                                <p>Une belle surprise sur la région de Bizerte pour moi j'adore l'endroit reste à voir sur place 😍.</p>
+                                <div class="info">
+                                    <div class="author-img"> <img src="assets/img/testimonial/02.png" alt=""> </div>
+                                    <div class="cont"> <span><i class="star-rating"></i><i
+                                                class="star-rating"></i><i class="star-rating"></i><i
+                                                class="star-rating"></i><i class="star-rating"></i></span>
+                                        <h6>Sarra Mihoub</h6> <span>Founder, hilix</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span class="quote"><img src="assets/img/quot.png" alt=""></span>
+                                <p>un endroit féérique et un service hors norme, top.</p>
+                                <div class="info">
+                                    <div class="author-img"> <img src="assets/img/testimonial/03.png" alt=""> </div>
+                                    <div class="cont"> <span><i class="star-rating"></i><i
+                                                class="star-rating"></i><i class="star-rating"></i><i
+                                                class="star-rating"></i><i class="star-rating"></i></span>
+                                        <h6>Ahlem Amara</h6> <span>Founder, Condo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span class="quote"><img src="assets/img/quot.png" alt=""></span>
+                                <p>Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the
+                                    lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman at
+                                    finibus viverra neca the sene on satien the miss drana inc fermen norttito sit
+                                    space, mus nellentesque habitan.</p>
+                                <div class="info">
+                                    <div class="author-img"> <img src="assets/img/team/5.jpg" alt=""> </div>
+                                    <div class="cont"> <span><i class="star-rating"></i><i
+                                                class="star-rating"></i><i class="star-rating"></i><i
+                                                class="star-rating"></i><i class="star-rating"></i></span>
+                                        <h6>Olivia Martin</h6> <span>Guest review</span>
+                                    </div>
+                                </div>
+                            </div-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- Footer -->
+
+  <!-- jQuery -->
+
+</body>

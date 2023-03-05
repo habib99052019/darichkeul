@@ -1,0 +1,37 @@
+[{
+        "id": 1,
+        "icon": "flaticon-boiled",
+        "title": "Restaurant",
+        "url": "/restaurant"
+    },
+    {
+        "id": 2,
+        "icon": "flaticon-swimming",
+        "title": "Piscine",
+        "url": "/gallery"
+    },
+    {
+        "id": 3,
+        "icon": "flaticon-rating",
+        "title": "Equitation",
+        "url": "/offers"
+    },
+    {
+        "id": 4,
+        "icon": "flaticon-man",
+        "title": "Tennis",
+        "url": "/gallery"
+    },
+    {
+        "id": 5,
+        "icon": "flaticon-globe",
+        "title": "Randonnée",
+        "url": "/gallery"
+    },
+    {
+        "id": 6,
+        "icon": "flaticon-cocktail",
+        "title": "Cocktail",
+        "url": "/gallery"
+    }
+]

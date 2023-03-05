@@ -1,0 +1,356 @@
+<body>
+  <!-- Progress scroll totop -->
+  <div class="progress-wrap cursor-pointer">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Restaurant Slider -->
+  <header class="header slider">
+    <div class="owl-carousel owl-theme">
+      <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/new/image_6483441_a.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="/assets/img/photos_new_content/les_slides/IMG_1654.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3"  data-background="assets/img/photos_new_content/new/image_67515137.jpg"></div>
+    </div>
+    <!-- arrow down -->
+    <div class="arrow bounce text-center">
+      <a href="#" data-scroll-nav="1" class=""> <i class="ti-arrow-down"></i> </a>
+    </div>
+  </header>
+  <!-- Restaurant Content -->
+  <section class="rooms-page section-padding" data-scroll-index="1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-left">
+          <span>
+            <i class="star-rating"></i>
+            <i class="star-rating"></i>
+            <i class="star-rating"></i>
+            <i class="star-rating"></i>
+            <i class="star-rating"></i>
+          </span>
+          <div class="section-subtitle">Dar icheul</div>
+          <div class="section-title">The Restaurant</div>
+        </div>
+        <div class="col-md-12">
+          <p class="mb-30">Le poulailler, la campagne, les cages… Chaque espace représente une ambiance champêtre et définit les caractéristiques propres de la vie agricole. Un défi des plus intéressants qui se relève merveilleusement grâce au jeu intense de couleurs, matériaux et textures.</p>
+          <h6>Heures</h6>
+          <ul class="list-unstyled page-list mb-30">
+            <li>
+              <div class="page-list-icon"> <span class="ti-time"></span> </div>
+              <div class="page-list-text">
+                <p>Petit déjeuner : 7.00 h – 11.00 h (daily)</p>
+              </div>
+            </li>
+            <li>
+              <div class="page-list-icon"> <span class="ti-time"></span> </div>
+              <div class="page-list-text">
+                <p>Déjeuner : 12.00h – 14.00 h (daily)</p>
+              </div>
+            </li>
+            <li>
+              <div class="page-list-icon"> <span class="ti-time"></span> </div>
+              <div class="page-list-text">
+                <p>Dîner : De 7.00h - 9.00h (daily)</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Restaurant Menu -->
+  <section id="menu" class="restaurant-menu menu section-padding bg-blck">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="section-subtitle"><span>Dar ichkeul</span></div>
+          <div class="section-title"><span>Restaurant Menu</span></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="tabs-icon col-md-10 offset-md-1 text-center">
+              <div class="owl-carousel owl-theme">
+                <div id="tab-1" class="active item">
+                  <h6>Entrée froides</h6>
+                </div>
+                <div id="tab-2" class="item">
+                  <h6>Entrée chaude</h6>
+                </div>
+                <div id="tab-3" class="item">
+                  <h6>Nos spécialités</h6>
+                </div>
+                <div id="tab-4" class="item">
+                  <h6>Pâtes</h6>
+                </div>
+                <div id="tab-5" class="item">
+                  <h6>Boissons</h6>
+                </div>
+                <div id="tab-6" class="item">
+                  <h6>Dessert</h6>
+                </div>
+              </div>
+            </div>
+            <div class="restaurant-menu-content col-md-12">
+              <!-- Starters -->
+              <div id="tab-1-content" class="cont active">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="menu-info">
+                      <h5> {{menu_1[0].name}} <span class="price">{{menu_1[0].price}}DT</span></h5>
+                      <p>{{menu_1[0].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_1[1].name}} <span class="price">{{menu_1[1].price}}DT</span></h5>
+                      <p>{{menu_1[1].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_1[2].name}} <span class="price">{{menu_1[2].price}}DT</span></h5>
+                      <p>{{menu_1[2].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_1[3].name}} <span class="price">{{menu_1[3].price}}DT</span></h5>
+                      <p>{{menu_1[3].phraseDescription}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-5 offset-md-2">
+                    <div class="menu-info">
+                      <h5> {{menu_1[4].name}} <span class="price">{{menu_1[4].price}}DT</span></h5>
+                      <p>{{menu_1[4].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_1[5].name}} <span class="price">{{menu_1[5].price}}DT</span></h5>
+                      <p>{{menu_1[5].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_1[6].name}} <span class="price">{{menu_1[6].price}}DT</span></h5>
+                      <p>{{menu_1[6].phraseDescription}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Mains -->
+              <div id="tab-2-content" class="cont">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="menu-info">
+                      <h5> {{menu_2[0].name}} <span class="price">{{menu_2[0].price}}DT</span></h5>
+                      <p>{{menu_2[0].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_2[1].name}} <span class="price">{{menu_2[1].price}}DT</span></h5>
+                      <p>{{menu_2[1].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_2[2].name}} <span class="price">{{menu_2[2].price}}DT</span></h5>
+                      <p>{{menu_2[2].phraseDescription}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Salads -->
+              <div id="tab-3-content" class="cont">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="menu-info">
+                      <h5> {{menu_3[0].name}} <span class="price">{{menu_3[0].price}}DT</span></h5>
+                      <p>{{menu_3[0].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_3[1].name}} <span class="price">{{menu_3[1].price}}DT</span></h5>
+                      <p>{{menu_3[1].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_3[2].name}} <span class="price">{{menu_3[2].price}}DT</span></h5>
+                      <p>{{menu_3[2].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_3[6].name}} <span class="price">{{menu_3[6].price}}DT</span></h5>
+                      <p>{{menu_3[6].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_3[7].name}} <span class="price">{{menu_3[7].price}}DT</span></h5>
+                      <p>{{menu_3[7].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_3[8].name}} <span class="price">{{menu_3[8].price}}DT</span></h5>
+                      <p>{{menu_3[8].phraseDescription}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-5 offset-md-2">
+                    <div class="menu-info">
+                      <h5> {{menu_3[3].name}} <span class="price">{{menu_3[3].price}}DT</span></h5>
+                      <p>{{menu_3[3].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_3[4].name}} <span class="price">{{menu_3[4].price}}DT</span></h5>
+                      <p>{{menu_3[4].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_3[5].name}} <span class="price">{{menu_3[5].price}}DT</span></h5>
+                      <p>{{menu_3[5].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_3[9].name}} <span class="price">{{menu_3[9].price}}DT</span></h5>
+                      <p>{{menu_3[9].phraseDescription}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Wine -->
+              <div id="tab-4-content" class="cont">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="menu-info">
+                      <h5> {{menu_4[0].name}} <span class="price">{{menu_4[0].price}}DT</span></h5>
+                      <p>{{menu_4[0].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_4[1].name}} <span class="price">{{menu_4[1].price}}DT</span></h5>
+                      <p>{{menu_4[1].phraseDescription}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Breakfast -->
+              <div id="tab-5-content" class="cont">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="menu-info">
+                      <h5> {{menu_5[0].name}} <span class="price">{{menu_5[0].price}}DT</span></h5>
+                      <p>{{menu_5[0].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_5[1].name}} <span class="price">{{menu_5[1].price}}DT</span></h5>
+                      <p>{{menu_5[1].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_5[2].name}} <span class="price">{{menu_5[2].price}}DT</span></h5>
+                      <p>{{menu_5[2].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_5[3].name}} <span class="price">{{menu_5[3].price}}DT</span></h5>
+                      <p>{{menu_5[3].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_5[4].name}} <span class="price">{{menu_5[4].price}}DT</span></h5>
+                      <p>{{menu_5[4].phraseDescription}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-5 offset-md-2">
+                    <div class="menu-info">
+                      <h5> {{menu_5[5].name}} <span class="price">{{menu_5[5].price}}DT</span></h5>
+                      <p>{{menu_5[5].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_5[6].name}} <span class="price">{{menu_5[6].price}}DT</span></h5>
+                      <p>{{menu_5[6].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_5[7].name}} <span class="price">{{menu_5[7].price}}DT</span></h5>
+                      <p>{{menu_5[7].phraseDescription}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Dessert -->
+              <div id="tab-6-content" class="cont">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="menu-info">
+                      <h5> {{menu_6[0].name}} <span class="price">{{menu_6[0].price}}DT</span></h5>
+                      <p>{{menu_6[0].phraseDescription}}</p>
+                    </div>
+                    <div class="menu-info">
+                      <h5> {{menu_6[1].name}} <span class="price">{{menu_6[1].price}}DT</span></h5>
+                      <p>{{menu_6[1].phraseDescription}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testiominals -->
+  <section class="testimonials">
+      <div class="background bg-img bg-fixed section-padding pb-0" data-background="assets/img/photos_new_content/les_slides/178483159_751807848867108_6722969823734392856_n.jpg"
+          data-overlay-dark="3">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                      <div class="testimonials-box">
+                          <div class="head-box">
+                              <h6>Témoignage</h6>
+                              <h4>Ce que nos clients disent de nous</h4>
+                              <div class="line"></div>
+                          </div>
+                          <div class="owl-carousel owl-theme">
+                              <div class="item" *ngFor="let item of testimonials">
+                                  <span class="quote"><img src="assets/img/quot.png" alt=""></span>
+                                  <p>{{item.description}}</p>
+                                  <div class="info">
+                                      <div class="author-img"> <img [src]="item.image" alt=""> </div>
+                                      <div class="cont"> <span><i class="star-rating"></i><i
+                                                  class="star-rating"></i><i class="star-rating"></i><i
+                                                  class="star-rating"></i><i class="star-rating"></i></span>
+                                          <h6>{{item.name}}</h6> <span> {{item.profession}} </span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!--div class="item">
+                                  <span class="quote"><img src="assets/img/quot.png" alt=""></span>
+                                  <p>Une belle surprise sur la région de Bizerte pour moi j'adore l'endroit reste à voir sur place 😍.</p>
+                                  <div class="info">
+                                      <div class="author-img"> <img src="assets/img/testimonial/02.png" alt=""> </div>
+                                      <div class="cont"> <span><i class="star-rating"></i><i
+                                                  class="star-rating"></i><i class="star-rating"></i><i
+                                                  class="star-rating"></i><i class="star-rating"></i></span>
+                                          <h6>Sarra Mihoub</h6> <span>Founder, hilix</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="item">
+                                  <span class="quote"><img src="assets/img/quot.png" alt=""></span>
+                                  <p>un endroit féérique et un service hors norme, top.</p>
+                                  <div class="info">
+                                      <div class="author-img"> <img src="assets/img/testimonial/03.png" alt=""> </div>
+                                      <div class="cont"> <span><i class="star-rating"></i><i
+                                                  class="star-rating"></i><i class="star-rating"></i><i
+                                                  class="star-rating"></i><i class="star-rating"></i></span>
+                                          <h6>Ahlem Amara</h6> <span>Founder, Condo</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="item">
+                                  <span class="quote"><img src="assets/img/quot.png" alt=""></span>
+                                  <p>Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the
+                                      lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman at
+                                      finibus viverra neca the sene on satien the miss drana inc fermen norttito sit
+                                      space, mus nellentesque habitan.</p>
+                                  <div class="info">
+                                      <div class="author-img"> <img src="assets/img/team/5.jpg" alt=""> </div>
+                                      <div class="cont"> <span><i class="star-rating"></i><i
+                                                  class="star-rating"></i><i class="star-rating"></i><i
+                                                  class="star-rating"></i><i class="star-rating"></i></span>
+                                          <h6>Olivia Martin</h6> <span>Guest review</span>
+                                      </div>
+                                  </div>
+                              </div-->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Footer -->
+
+  <!-- jQuery -->
+
+</body>
