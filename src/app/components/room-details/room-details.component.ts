@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/services/api';
 import rooms from '../../data/room.json';
 
-declare var $:any
 
 
 @Component({
@@ -12,9 +12,11 @@ declare var $:any
   styleUrls: ['./room-details.component.css']
 })
 export class RoomDetailsComponent implements OnInit {
-
-  constructor(private route: ActivatedRoute) { }
-
+   
+  constructor(private route: ActivatedRoute, public  api : ApiService) { 
+    this.api.idRoom=this.route.snapshot.params['id']
+  }
+ 
 
   routeSub:any
   titleRoom:any
@@ -23,8 +25,9 @@ export class RoomDetailsComponent implements OnInit {
 
 
   getRoomDetails(items:any){
-
+  
     var id  = parseInt(this.route.snapshot.params['id'])
+
      
     items.map((item:any)=>{
 

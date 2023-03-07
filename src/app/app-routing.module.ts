@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RoomGridComponent } from "./components/room-grid/room-grid.component";
 import { HomeComponent } from "./components/home/home.component";
@@ -8,9 +8,10 @@ import { ContactComponent } from "./components/contact/contact.component";
 import { RestaurantComponent } from "./components/restaurant/restaurant.component";
 import { RoomDetailsComponent } from "./components/room-details/room-details.component";
 import { FermeComponent } from "./components/ferme/ferme.component";
+import { SliderFormReservComponent } from "./components/slider-form-reserv/slider-form-reserv.component";
+
 
 const routes: Routes = [
-
   {path: '', component: HomeComponent },
   {path: 'about', component: AboutComponent },
   {path: 'activités', component: ActivitiesComponent },
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'restaurant', component: RestaurantComponent },
   {path: 'rooms', component: RoomGridComponent },
   {path: 'room/:id', component: RoomDetailsComponent },
-  {path: 'ferme', component: FermeComponent }
+  {path: 'ferme', component: FermeComponent },
+  {path: 'slider', component: SliderFormReservComponent }
 
 ];
 

@@ -29,7 +29,25 @@
               "src/styles.css"
             ],
             "scripts": [
-           
+              
+              "src/assets/js/jquery-3.6.3.min.js",
+             "src/assets/js/jquery-migrate-3.0.0.min.js",
+              "src/assets/js/modernizr-2.6.2.min.js",
+              "src/assets/js/imagesloaded.pkgd.min.js",
+              "src/assets/js/jquery.isotope.v3.0.2.js",
+              "src/assets/js/pace.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/scrollIt.min.js",
+              "src/assets/js/jquery.waypoints.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/jquery.stellar.min.js",
+              "src/assets/js/jquery.magnific-popup.js",
+              "src/assets/js/YouTubePopUp.js",
+              "src/assets/js/select2.js",
+              "src/assets/js/datepicker.js",
+              "src/assets/js/smooth-scroll.min.js",
+              "src/assets/js/custom.js"
             ]
           },
           "configurations": {

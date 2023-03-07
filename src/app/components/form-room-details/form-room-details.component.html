@@ -1,0 +1,92 @@
+<div class="form1 clearfix" *ngIf="step === 1">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="input1_wrapper">
+        <label>Check in</label>
+        <div class="input1_inner">
+          <input type="text" id="start-date" class="form-control input datepicker" placeholder="Check in">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="input1_wrapper">
+        <label>Check out</label>
+        <div class="input1_inner">
+          <input type="text"  id="end-date" class="form-control input datepicker" placeholder="Check out">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="select1_wrapper">
+        <label>Adults</label>
+        <div class="select1_inner">
+          <select class="select2 select" style="width: 100%" (change)="selctAdults($event)">
+            <option value="0">Adults</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="select1_wrapper">
+        <label>Children</label>
+        <div class="select1_inner">
+          <select class="select2 select" style="width: 100%" (change)="selctEnfants($event)">
+            <option value="0">Children</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <button class="btn-form1-submit mt-15" (click)="nextStep()">Réserver</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="form1 clearfix"   *ngIf="step === 2">
+ 
+    <!-- <div class="row" >
+
+      <div class="col-md-12">
+        <div class="input-reserv-room">
+          <input type="text" placeholder="Nom *" />
+          <label *ngIf="user.controls.nom.hasError('required') && this.user.controls.nom.touched" style="color: red;">le nom obligatoire</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="input-reserv-room">
+          <input type="text" placeholder="Prénom *" />
+          <label *ngIf="user.controls.prenom.hasError('required') && this.user.controls.prenom.touched" style="color: red;">le prenom obligatoire</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="input-reserv-room">
+          <input type="text" placeholder="Adresse email *" />
+          <label *ngIf="user.controls.email.hasError('required') && this.user.controls.email.touched" style="color: red;">email obligatoire</label>
+          <label *ngIf="user.controls.email.hasError('email') && this.user.controls.email.touched" style="color: red;">email non exact</label>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="input-reserv-room">
+          <input type="text" placeholder="Numéro de téléphone *" (input)="validPhone($event)"/>
+          <label *ngIf="user.controls.phone.hasError('required') && this.user.controls.phone.touched" style="color: red;">phone obligatoire</label>
+          <label *ngIf="testLengthPhone" style="color: red;">phone non exact</label>
+          
+          
+        </div>
+      </div>
+      <div class="col-md-12">
+        <button class="btn-form1-submit mt-15" (click)="getFn()">Confirmer</button>
+      </div>
+    </div> -->
+ 
+  
+</div>

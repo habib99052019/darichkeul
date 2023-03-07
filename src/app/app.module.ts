@@ -13,13 +13,10 @@ import { RoomGridComponent } from './components/room-grid/room-grid.component';
 import { RoomDetailsComponent } from './components/room-details/room-details.component';
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
-import { FormReservationComponent } from './components/form-reservation/form-reservation.component';
-import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { FermeComponent } from './components/ferme/ferme.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatNativeDateModule,MAT_DATE_LOCALE} from '@angular/material/core'
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import { FormGlobaleComponent } from './components/form-globale/form-globale.component'
+import { FormGlobalComponent } from './components/form-global/form-global.component';
+import { FormRoomDetailsComponent } from './components/form-room-details/form-room-details.component';
+import { SliderFormReservComponent } from './components/slider-form-reserv/slider-form-reserv.component';
 
 
 @NgModule({
@@ -33,20 +30,15 @@ import { FormGlobaleComponent } from './components/form-globale/form-globale.com
     RoomDetailsComponent,
     RestaurantComponent,
     ActivitiesComponent,
-    FormReservationComponent,
     FermeComponent,
-    FormGlobaleComponent
+    FormGlobalComponent,
+    FormRoomDetailsComponent,
+    SliderFormReservComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NoopAnimationsModule,
-    MatDatepickerModule, 
-    MatNativeDateModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

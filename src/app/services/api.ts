@@ -8,10 +8,10 @@ import rooms from '../data/room.json';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
-
-  //private apiUrl = 'https://www.heart-of-carthage-dubai.com/admin/me//suits?today=true';
-
+  idRoom:any
+  formReservation:any
   page: number = 1;
   public rooms = rooms;
   //public aboutcarousels = aboutcarousel;
@@ -24,6 +24,7 @@ export class ApiService {
   public route = "home"
   public dataRouteParam = ""
 
+  isReservOpened = false
   
 
   constructor(private http : HttpClient){} //private snackBar: MatSnackBar) { }
@@ -79,11 +80,12 @@ export class ApiService {
     return this.http.get(this.ApiPath+'/reservations/check/room?room='+title)
  
   }
-  /*
+  
   public getSingleSuiteToute(){
     return this.http.get(this.ApiPath+'/reservations/check/room?room='+"Toute la villa")
  
   }
+  /*
   ngAfterContentInit(): void {
     this.setRoom(this.route.snapshot.params.id);
   }
@@ -106,5 +108,6 @@ export class ApiService {
   reservationEnligneAndSendEmail(data : any){
     return this.http.post("https://heart-of-carthage-dubai.com/backend/mail/send-mail6", data)
   }*/
+
 
 }
