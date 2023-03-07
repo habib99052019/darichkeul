@@ -118,31 +118,32 @@ export class FormRoomDetailsComponent implements OnInit {
           var tab=  this.tabDate.sort((a:any, b:any) =>new Date(a).getTime() - new Date(b).getTime());
      tab = tab.filter((ele:any)=>new Date(ele).getTime()> new Date().getTime())
           console.log(tab)
-          this.tabInput=tab
+         
+          var inputs = [
+            {
+                id:"dateArrv",
+                disabledDates:this.tabDate ,// this.tabeDate => this.getSingleSuite()
+                minDt: tab,// 
+                maxDt:null
+            }
+          ]
+      
+          inputs.forEach((input:any)=>{
+            datePickerManager(input)
+          })
+      
+          $(document).ready(()=>{
+      
+            console.log($("#dateDeb"))
+            $("#dateDeb").attr("min","2023-03-08")
+            $("#dateDeb").attr("max","2023-03-16")
+            
+          })
+      
         })
       
     
-        var inputs = [
-          {
-              id:"dateArrv",
-              disabledDates:this.tabDate ,// this.tabeDate => this.getSingleSuite()
-              minDt:this.tabInput,// 
-              maxDt:null
-          }
-        ]
-    
-        inputs.forEach((input:any)=>{
-          datePickerManager(input)
-        })
-    
-        $(document).ready(()=>{
-    
-          console.log($("#dateDeb"))
-          $("#dateDeb").attr("min","2023-03-08")
-          $("#dateDeb").attr("max","2023-03-16")
-          
-        })
-    
+     
       }
 
 }

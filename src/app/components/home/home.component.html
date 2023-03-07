@@ -91,7 +91,7 @@
                         <div class="input1_wrapper">
                             <label>Check in</label>
                             <div class="input1_inner">
-                                <input type="text" id="dateIn" class="form-control input datepicker" placeholder="Check in">
+                                <input type="text" id="start-date" class="form-control input datepicker" placeholder="Check in">
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                         <div class="input1_wrapper">
                             <label>Check out</label>
                             <div class="input1_inner">
-                                <input type="text" class="form-control input datepicker" placeholder="Check out">
+                                <input type="text " id="end-date" class="form-control input datepicker" placeholder="Check out">
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                         <div class="select1_wrapper">
                             <label>Adults</label>
                             <div class="select1_inner">
-                                <select class="select2 select" style="width: 100%">
+                                <select class="select2 select" style="width: 100%" (change)="selctAdults($event)">
                                     <option value="1">1 Adult</option>
                                     <option value="2">2 Adults</option>
                                     <option value="3">3 Adults</option>
@@ -120,7 +120,7 @@
                         <div class="select1_wrapper">
                             <label>Children</label>
                             <div class="select1_inner">
-                                <select class="select2 select" style="width: 100%">
+                                <select class="select2 select" style="width: 100%" (change)="selctEnfants($event)">
                                     <option value="1">Children</option>
                                     <option value="1">1 Child</option>
                                     <option value="2">2 Children</option>
@@ -130,21 +130,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col2 c5">
-                        <div class="select1_wrapper">
-                            <label>Rooms</label>
-                            <div class="select1_inner">
-                                <select class="select2 select" style="width: 100%">
-                                    <option value="1">1 Room</option>
-                                    <option value="2">2 Rooms</option>
-                                    <option value="3">3 Rooms</option>
-                                    <option value="4">4 Rooms</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                   
                     <div class="col3 c6">
-                        <button type="submit" (click)="getValue()">Check Now</button>
+                        <button type="button" (click)="check()">Check Now</button>
                     </div>
                 </form>
             </div>
