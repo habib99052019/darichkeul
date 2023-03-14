@@ -10,6 +10,8 @@ import rooms from '../data/room.json';
 })
 
 export class ApiService {
+  enfant:any
+  adultes:any
   idRoom:any
   formReservation:any
   page: number = 1;
@@ -25,23 +27,22 @@ export class ApiService {
   public dataRouteParam = ""
 
   isReservOpened = false
-  
+  isReservConfirmed = false
+
+  roomsListFilter:any
 
   constructor(private http : HttpClient){} //private snackBar: MatSnackBar) { }
-  
 
-  getAllSuites(){
-    
+
+ getAllSuites(){
+
     return this.http.get(this.ApiPath+'/suits?today=true')
-  
+
   }
- 
+
   getAllResvation(){
-    this.http.get('http://jsonplaceholder.typicode.com/posts').subscribe(data => {
-      console.log(data);
-    });
     return this.http.get(this.ApiPath+'/reservations/check/room?room=all&front=true')
-  
+
   }
 
   // Get Category
@@ -59,6 +60,10 @@ export class ApiService {
   //   return elems;
   // }
   // Offers
+  public sendEmail(form:any){
+    this.http.post('https://heart-of-carthage-dubai.com/backend/email/send-mail-ichkel/',form).subscribe(res=>{
+      console.log(res)})
+  }
   public getOffer() {
     var elems = rooms.filter((item: { offer: boolean; }) => {
       return item.offer === true;
@@ -75,15 +80,15 @@ export class ApiService {
     this.roomdetails = rooms.filter((item: { id: any; }) => { return item.id == id });
     return this.roomdetails
     }
-  
+
   public getSingleSuite(title:string){
-    return this.http.get(this.ApiPath+'/reservations/check/room?room='+title)
- 
+    return this.http.get(this.ApiPath+'/reservations/check/room?room='+title + '&front=true')
+
   }
-  
+
   public getSingleSuiteToute(){
     return this.http.get(this.ApiPath+'/reservations/check/room?room='+"Toute la villa")
- 
+
   }
   /*
   ngAfterContentInit(): void {
@@ -104,7 +109,7 @@ export class ApiService {
     return this.http.post(this.ApiPath + '/booking', data)
   }
 
-  // En ligne reservation and send email 
+  // En ligne reservation and send email
   reservationEnligneAndSendEmail(data : any){
     return this.http.post("https://heart-of-carthage-dubai.com/backend/mail/send-mail6", data)
   }*/

@@ -12,9 +12,41 @@ import { Router } from '@angular/router';
 
 export class AppComponent {
 
-  constructor(private serviceHelper:ApiService,private router: Router){}
+  constructor(public serviceHelper:ApiService,private router: Router){}
 
   route = this.serviceHelper.route
+
+  getRight(){
+
+    if(this.serviceHelper.isReservConfirmed){
+      return "3%"
+    }else{
+      return "0%"
+    }
+
+  }
+
+  getOpacity(){
+
+    if(this.serviceHelper.isReservConfirmed){
+      return "1"
+    }else{
+      return "0"
+    }
+
+  }
+
+  getPointer(){
+    var rt = ""
+    if(this.serviceHelper.isReservConfirmed){
+
+      rt = "all"
+
+    }else{
+      rt = "none"
+    }
+    return rt
+  }
 
   getComponent(route:any){
 

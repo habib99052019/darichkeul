@@ -9,10 +9,12 @@
   <header class="header slider">
     <div class="owl-carousel owl-theme">
       <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
-      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/equitation/169819305_740302160017677_5655585245396388206_n.jpg"></div>
-      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/tennis/IMG_6716.jpg"></div>
-      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/les_slides/2d396e4f-86c9-4161-8d10-b06dded9ce67.jpg"></div>
-      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/equitation/196094469.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/ferme/IMG_6675.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/ferme/IMG_6737.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/ferme/IMG_7115_2.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/ferme/IMG_6705.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/ferme/IMG_6683.jpg"></div>
+      <div class="text-center item bg-img" data-overlay-dark="3" data-background="assets/img/photos_new_content/ferme/IMG_6699.jpg"></div>
     </div>
     <!-- arrow down -->
     <div class="arrow bounce text-center">
@@ -25,11 +27,12 @@
       <div class="row">
         <div class="col-md-12"> <span><i class="star-rating"></i><i class="star-rating"></i><i
               class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i></span>
-          <div class="section-subtitle">Dar ichkeul</div>
-          <div class="section-title">Nos activités</div>
+          <div class="section-subtitle">Notre ferme</div>
+          <div class="section-title">Trouvez votre forme et votre sérénité avec une bonne nutrition : </div>
           <p class="mb-30">
-            Au caractère rural et avec un grand enthousiasme pour tout ce qui est traditionnel, Dar ichkeul se présente comme la meilleure alternative pour se retrouver avec les saveurs de la terre et se sentir proche aux valeurs champêtres les plus chaleureuses et généreuses.
-            Fibres naturelles, couleurs vertes et air pur… Tout le monde adore la vie bucolique ! Il est toujours agréable d’avoir un endroit où se réfugier en quête d’un moment sain et tranquille.</p>
+            Dans notre  ferme, nous travaillons la terre de manière responsable, consciente et intelligente afin de servir dans les plats de notre clientèle un meilleur produit répondant aux normes éthiques et environnementales.
+            Nous utilisons une méthode de production agricole qui vise à respecter les systèmes et cycles naturels, maintenir et améliorer l’état du sol, de l’eau et de l’air, la santé des végétaux et des animaux, ainsi que l’équilibre entre ceux-ci.
+            </p>
         </div>
         <div class="col-md-12">
           <div class="reservations">
@@ -55,12 +58,11 @@
                 <div class="content">
                     <div class="cont text-left">
                         <div class="info">
-                            <h6>Dar ichkeul</h6>
+                            <img class="image-icon" [src]="item.icon" alt="">
                         </div>
                         <h4> {{item.title}} </h4>
                         <p>{{item.description}}</p>
-                        <div class="butn-dark" *ngIf="item.title === 'RESTAURANT'"> <a href="/restaurant"><span>Learn More</span></a> </div>
-                        <div class="butn-dark" *ngIf="item.title != 'RESTAURANT'"> <a href="/activités"><span>Learn More</span></a> </div>
+                        
                     </div>
                 </div>
             </div>
@@ -69,12 +71,11 @@
                 <div class="content">
                     <div class="cont text-left">
                         <div class="info">
-                            <h6>Dar ichkeul</h6>
+                            <img class="image-icon" [src]="item.icon" alt="">
                         </div>
                         <h4> {{item.title}} </h4>
                         <p>{{item.description}}</p>
-                        <div class="butn-dark" *ngIf="item.title === 'RESTAURANT'"> <a href="/restaurant"><span>Learn More</span></a> </div>
-                        <div class="butn-dark" *ngIf="item.title != 'RESTAURANT'"> <a href="/activités"><span>Learn More</span></a> </div>
+                        
                     </div>
                 </div>
             </div>
@@ -155,58 +156,42 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-subtitle">F.A.Qs</div>
-          <div class="section-title">Nos activités</div>
+          <div class="section-title">Notre ferme</div>
         </div>
         <div class="col-md-12">
           <ul class="accordion-box clearfix">
             <li class="accordion block">
-              <div class="acc-btn">RESTAURANT</div>
+              <div class="acc-btn">Agneau Bio</div>
               <div class="acc-content">
                 <div class="content">
-                  <div class="text">Spa center inilla duiman at elit finibus viverra nec a lacus themo the drudea seneoice misuscipit non sagie the fermen. Viverra tristique jusio the ivite dianne onen nivami acsestion augue artine.</div>
+                  <div class="text">Nos viandes sont entièrement naturelles provenant d’animaux élevés sans hormone, sans 
+                    antibiotique et sans substitut animal.
+                    Dans notre ferme
+                    Nous sommes fiers de travailler sans relâche afin que nos animaux soient élevés dans un environnement respectant les standards du bien-être animal.
+                    </div>
                 </div>
               </div>
             </li>
             <li class="accordion block">
-              <div class="acc-btn">PISCINE</div>
+              <div class="acc-btn">Frais et Propre</div>
               <div class="acc-content">
                 <div class="content">
-                  <div class="text">Kindly refrain from using your mobile phone in The Spa premises. Please keep your
-                    mobile phone on silent mode at all times.</div>
+                  <div class="text">En choisissant vos légumes et fruits de notre potager et de notre ferme agricole vous pouvez avoir confiance et comprendre ce que vous mangez, d'où vient le produit et la vie qu'il a vécue Nous pensons que les aliments biologiques sont meilleurs pour vous, meilleurs pour l'environnement, meilleurs pour les animaux et produisent une différence que vous pouvez goûter et apprécier.</div>
                 </div>
               </div>
             </li>
             <li class="accordion block">
-              <div class="acc-btn">EQUITATION</div>
+              <div class="acc-btn">Poulet et oeufs Bio</div>
               <div class="acc-content">
                 <div class="content">
-                  <div class="text">We provide a secure place for your personal items inside The Spa complex. However,
-                    we do not accept liability for loss or damage. We recommend valuable items are stored inside the
-                    safe located in your hotel room/suite.</div>
+                  <div class="text">Nos poules biologiques errent librement autour de notre verger et des poiriers 
+                    biologiques.
+                    Elles ne mangeant que des aliments biologiques naturels et toutes les délicieuses larves qu'elles peuvent déterrer !
+                    </div>
                 </div>
               </div>
             </li>
-            <li class="accordion block">
-              <div class="acc-btn">TENNIS</div>
-              <div class="acc-content">
-                <div class="content">
-                  <div class="text">Please communicate health conditions such as high blood pressure and allergies, as
-                    well as pregnancy or any health-related concerns you may have when making your appointment. We do
-                    not recommend the consumption of alcohol before or directly after spa treatments or before using any
-                    facilities in the Spa and Health Club.</div>
-                </div>
-              </div>
-            </li>
-            <li class="accordion block">
-              <div class="acc-btn">RANDONNÉE</div>
-              <div class="acc-content">
-                <div class="content">
-                  <div class="text">The minimum age for entry to The Spa, The Health Club and the hydrothermal
-                    facilities is 16 years of age. Children under the age of 16 may use the hotel pool if they are
-                    accompanied by a parent/adult.</div>
-                </div>
-              </div>
-            </li>
+            
           </ul>
         </div>
       </div>

@@ -1,0 +1,9 @@
+@media (max-width:730px){
+	.logo-site-ich{
+		width: 62% !important;
+	}
+	.logo-container-ace{
+		width: 80% !important;
+		background: transparent !important;
+	}
+}

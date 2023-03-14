@@ -36,31 +36,6 @@
 }
 
 
-.mobile-slider-container{
-
-	padding: 28% 3% 0 5.4% !important;
-	animation: anim 1s;
-	transition: .6s;
-	box-shadow: 0 0 0.5vw 0 #8f8f8f;
-	background-color: white;
-	position: fixed;
-	z-index: 9000000000000000000000000000000000000000000;
-	top: 1%;
-	left: 0;
-	transform: scale(.9) !important;
-}
-
-.mobile-slider-container .slide{
-
-	margin: 0;
-	margin-right: 5%;
-	background-color: #2d2d2d;
-	margin-bottom: 3%;
-
-}
-
-
-
 
 .form-reservation {
 
@@ -72,7 +47,7 @@
 	left: 0;
 	display: flex;
 	align-items: center;
-	z-index: 580000000000000000000000000000000000000000000000000000000000;
+	z-index: 580000;
 	justify-content: center;
 	transition: .6s;
 
@@ -236,8 +211,20 @@
 	width: 100%;
 	font-size: 1.6vw;
 	margin-bottom: 5%;
+	position: relative;
 
 }
+
+.form-reserv .form .input .alert-text{
+
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: red;
+	font-size: 1.5vw;
+}
+
+
 
 .form-reserv .form .input input{
 
@@ -296,23 +283,76 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 5000000000000000000000000000000000000000000000000000000;
+	z-index: 500000;
+	transition: .6s;
 
 }
 
 .form-reserv-mobile .content{
 
-	width: 90%;
-	height: 90%;
+	width: 98%;
+	height: 100%;
+
+}
+
+.form-reserv-mobile .content .return-btn{
+
+	margin: 7%;
+    position: absolute;
+    font-size: 33px;
+
+}
+
+.form-reserv-mobile .content .close-btn{
+
+	width: 15.5%;
+    padding: 4% 0;
+    background-color: #caa16d;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    right: 7%;
+    bottom: 3%;
+    border-radius: 100%;
+    font-size: 28px;
+    color: white;
+    transform: scale(.9);
+}
+
+.form-reserv-mobile .content .close-btn i{
+
+	pointer-events: none;
 
 }
 
 
 
+.form-reserv-mobile .title-mobile-reserv{
+
+	font-size: 18px;
+    padding: 6% 4%
+
+}
+
+
+.form-reserv-mobile .btn-mobile-reserv{
+
+	width: 30%;
+    padding: 2% 2%;
+    background-color: #c7a466;
+    color: white;
+    position: absolute;
+    z-index: 5;
+    right: 5%;
+    font-size: 18px;
+    top: 2%;
+
+}
+
 .form-reserv-mobile .content .rooms-list{
 
-	width: 90%;
-	height: 76%;
+	width: 92%;
+	height: 88%;
 	margin-left: 4%;
 	overflow-y: auto;
 
@@ -321,34 +361,35 @@
 .form-reserv-mobile .content .rooms-list .room-item{
 
 	display: block;
-    align-items: center;
     background: #f1f1f1;
     position: relative;
     margin-bottom: 3%;
     width: 100%;
-    height: 40%;
+    height: 76%;
+    overflow: hidden;
 
 }
 
 .form-reserv-mobile .content .rooms-list .room-item img{
 
-	width: 36%;
-	height: 100%;
+	width: 100%;
 
 }
 
 .form-reserv-mobile .content .rooms-list .room-item .check-btn{
+	
 	background: transparent;
-	border: .2vw solid #e7c283;
-	color: transparent;
-    width: 5%;
+    border: 3px solid #ffffff;
+    width: 12%;
     text-align: center;
-    font-size: 1.6vw;
+    font-size: 20px;
     position: absolute;
-    top: 7%;
-    right: 2%;
-    padding: .3% 0;
+    top: 5%;
+    right: 6%;
+    padding: 1% 0;
     cursor: pointer;
+    color: transparent;
+
 }
 
 
@@ -361,15 +402,15 @@
 
 .form-reserv-mobile .content .rooms-list .room-item .details .room-name{
 
-	font-size: 2.5vw;
+	font-size: 25px;
     color: #c6a162;
-    padding: 1% 0;
+    padding: 8% 0;
 
 }
 
 .form-reserv-mobile .content .rooms-list .room-item .details .price span{
 
-	font-size: 2vw;
+	font-size: 31px;
     margin-top: 2%;
 
 }
@@ -378,32 +419,111 @@
 .form-reserv-mobile .content .rooms-list .room-item .details .price{
 
 	position: absolute;
-	top: 7%;
-	right: 9%;
+	top: 56%;
+	right: 6%;
+	font-size: 18px;
 
 
 }
 
 .form-reserv-mobile .content .rooms-list .room-item .details .description{
 
-	font-size: 1vw !important;
+	display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
 }
 
-.form-reserv-mobile .content .rooms-list .room-item .details .description p{
 
-	font-size: 9px !important;
+.form-user-mobile{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-user-mobile .form{
+
+	width: 79%;
+	height: auto;
+
+}
+
+.form-user-mobile .form .input-flex{
+
+	width: 100%;
+	margin-bottom: 5%;
+
+}
+
+.form-user-mobile .form .input{
+
+	width: 100%;
+	font-size: 18px;
+	margin-bottom: 5%;
+	position: relative;
+
+}
+
+.form-user-mobile .form .input input{
+
+	font-size: 18px;
+	background-color: #f0f0f0;
+	border: none;
+	padding: 5% 7%;
+
+}
+
+.form-user-mobile .form .input-flex .input{
+
+	width: 100%;
+	font-size: 18px;
+	margin: 0;
+
+}
+
+.form-user-mobile .form .input-flex .input input{
+
+	font-size: 18px;
+	padding: 5% 7%;
+	margin-top: 3%;
+
+}
+
+.form-user-mobile .form .confirm-btn{
+
+    width: 100%;
+    padding: 5% 0;
+    background: #caa16d;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 0;
+
+}
+
+.form-user-mobile .form .confirm-btn:hover{
+
+	background-color: #2f2e2e;
 
 }
 
 
+.form-user-mobile .form .input .alert-text{
+	font-size: 15px;
+    position: absolute;
+    right: 0;
+    color: red;
 
-
-
-
-
-
-
+}
 
 
 

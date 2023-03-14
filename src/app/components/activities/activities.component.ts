@@ -52,8 +52,8 @@ export class ActivitiesComponent implements OnInit {
 
     {
       title:"RESTAURANT",
-      image:"https://www.hotel-montana.ch/bilder/hauptbilder/restaurant-bar/_1200xAUTO_crop_center-center_100_none/2210_Scala-4.jpg",
-      //image:"assets/img/photos_new_content/les_salons/IMG_6891.jpg",
+      //image:"https://www.hotel-montana.ch/bilder/hauptbilder/restaurant-bar/_1200xAUTO_crop_center-center_100_none/2210_Scala-4.jpg",
+      image:"assets/img/photos_new_content/new/restau2.png",
       description:"Spa center inilla duiman at elit finibus viverra nec a lacus themo the drudea seneoice misuscipit non sagie the fermen. Viverra tristique jusio the ivite dianne onen nivami acsestion augue artine.",
       period:"daily",
       start_at:"07",

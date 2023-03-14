@@ -1,50 +1,63 @@
-<div class="form-reservation" (click)="closePcForm($event)" *ngIf="!isMobile" [ngStyle]="{'opacity':getOpacity(),'pointer-events':getPointer()}">
+<div class="form-reservation" (click)="closePcForm($event)" *ngIf="!isMobile" >
     <div class="content">
-        <div class="suiv-btn-form" *ngIf="step === 1" (click)="nextStep()">suivant</div>
-        <div class="suiv-btn-form rt" *ngIf="step === 2" (click)="previousStep()">retour</div>
+        <div class="suiv-btn-form" *ngIf="step === 1" (click)="nextStep(stepOne,stepTwo)">suivant</div>
+        <div class="suiv-btn-form rt" *ngIf="step === 2" (click)="previousStep(stepOne,stepTwo)">retour</div>
         <div class="title-content" *ngIf="step === 1">Choisire une chambre</div>
-        <div class="rooms-list" *ngIf="step === 1">
-            <div class="room-item" *ngFor="let item of roomsList">
+        <div class="rooms-list" #stepOne>
+            <div class="room-item" *ngFor="let item of serv.roomsListFilter">
                 <img [src]="item.gridimage" />
                 <div class="details">
                     <div class="room-name">{{item.title}}</div>
                     <div class="price"><span>{{item.price}}</span> DT / {{item.period}}</div>
-                    <div class="description" [innerHTML]="item.longdesc"></div>
+                    <div class="description">{{item.longdesc}}</div>
                 </div>
                 <div class="check-btn" (click)="checkRoom(item)" [id]="'room-slide-'+item.id"><i class="fa-solid fa-check"></i></div>
             </div>
         </div>
-        <div class="form-reserv" *ngIf="step === 2">
-            <div class="form">
+        <div class="form-reserv" id="stepTwo" #stepTwo>
+            <div class="form" [formGroup]="formReserv" >
                 <div class="input-flex">
                     <div class="input">
-                        <label>Nom *</label><br>
-                        <input type="text" placeholder="Nom">
+                        <label>Nom *</label>
+                        <label class="alert-text" *ngIf="formReserv.controls.nom.hasError('required') && formReserv.controls.nom.touched">Obligatoire</label>
+                        <br>
+                        <input type="text" placeholder="Nom"  formControlName="nom">
                     </div>
                     <div class="input">
-                        <label>Prénom *</label><br>
-                        <input type="text" placeholder="Prénom">
+                        <label>Prénom *</label>
+                        <label class="alert-text" *ngIf="formReserv.controls.prenom.hasError('required') && formReserv.controls.prenom.touched">Obligatoire</label>
+                        <br>
+                        <input type="text" placeholder="Prénom"  formControlName="prenom">
                     </div>
                 </div>
                 <div class="input">
-                    <label>Adresse email *</label><br>
-                    <input type="text" placeholder="Prénom">
+                    <label>Adresse email *</label>
+                    <label class="alert-text" *ngIf="formReserv.controls.email.hasError('required') && formReserv.controls.email.touched">Obligatoire</label>
+                    <label class="alert-text" *ngIf="formReserv.controls.email.hasError('email') && formReserv.controls.email.touched">Adresse invalide</label>
+                    <br>
+                    <input type="text" placeholder="Adresse email"  formControlName="email">
                 </div>
                 <div class="input">
-                    <label>Numéro de téléphone *</label><br>
-                    <input type="text" placeholder="Numéro de téléphone">
+                    <label>Numéro de téléphone *</label>
+                    <label class="alert-text" *ngIf="formReserv.controls.mobile.hasError('required') && formReserv.controls.mobile.touched">Obligatoire</label>
+                    <label class="alert-text" *ngIf="!checkPhone && !(formReserv.controls.mobile.hasError('required') && formReserv.controls.mobile.touched)">minimum 8 chiffre</label>
+                    <br>
+                    <input type="text" placeholder="Numéro de téléphone" (input)="validPhone($event)"  formControlName="mobile">
                 </div>
-                <div class="confirm-btn">confirmer</div>
+                <div class="confirm-btn" (click)="confirmReservation()">confirmer</div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="form-reserv-mobile" *ngIf="isMobile">
+<div class="form-reserv-mobile" *ngIf="isMobile" >
     <div class="content">
+        <div class="return-btn" *ngIf="step === 2" (click)="previousStep(stepOneMobile,stepTwoMobile)"><i class="fa-solid fa-arrow-left"></i></div>
         <div class="title-mobile-reserv" *ngIf="step === 1">Choisire une chambre</div>
-        <div class="rooms-list" *ngIf="step === 1">
-            <div class="room-item" *ngFor="let item of roomsList">
+        <button class="btn-mobile-reserv" *ngIf="step === 1" (click)="nextStep(stepOneMobile,stepTwoMobile)">suivant</button>
+        <div class="close-btn" (click)="closePcForm($event)"><i class="fa-solid fa-xmark"></i></div>
+        <div class="rooms-list" #stepOneMobile >
+            <div class="room-item" *ngFor="let item of serv.roomsListFilter">
                 <img [src]="item.gridimage" />
                 <div class="details">
                     <div class="room-name">{{item.title}}</div>
@@ -54,5 +67,38 @@
                 <div class="check-btn" (click)="checkRoom(item)" [id]="'room-slide-'+item.id"><i class="fa-solid fa-check"></i></div>
             </div>
         </div>
+        <div class="form-user-mobile" id="stepTwoMobile" #stepTwoMobile>
+            <div class="form" [formGroup]="formReservMobile">
+                <div class="input-flex">
+                    <div class="input">
+                        <label>Nom *</label>
+                        <label class="alert-text" *ngIf="formReservMobile.controls.Nom.hasError('required') && formReservMobile.controls.Nom.touched">Obligatoire</label>
+                        <br>
+                        <input type="text" placeholder="Nom" formControlName="Nom">
+                    </div>
+                    <div class="input">
+                        <label>Prénom *</label><label class="alert-text" *ngIf="formReservMobile.controls.Prenom.hasError('required') && formReservMobile.controls.Prenom.touched">Obligatoire</label>
+                        <br>
+                        <input type="text" placeholder="Prénom" formControlName="Prenom">
+                    </div>
+                </div>
+                <div class="input">
+                    <label>Adresse email *</label>
+                    <label class="alert-text" *ngIf="formReservMobile.controls.Email.hasError('required') && formReservMobile.controls.Email.touched">Obligatoire</label>
+                    <label class="alert-text" *ngIf="formReservMobile.controls.Email.hasError('email') && formReservMobile.controls.Email.touched">Adresse invalide</label>
+                    <br>
+                    <input type="text" placeholder="Adresse email" formControlName="Email">
+                </div>
+                <div class="input">
+                    <label>Téléphone *</label>
+                    <label class="alert-text" *ngIf="formReservMobile.controls.Mobile.hasError('required') && formReservMobile.controls.Mobile.touched">Obligatoire</label>
+                    <label class="alert-text" *ngIf="!checkPhone && !(formReservMobile.controls.Mobile.hasError('required') && formReservMobile.controls.Mobile.touched)">minimum 8 chiffre</label>
+                    <br>
+                    <input type="text" placeholder="Numéro de téléphone" (input)="validPhone($event)" formControlName="Mobile">
+                </div>
+                <div class="confirm-btn" (click)="confirmReservation()">confirmer</div>
+            </div>
+        </div>
     </div>
+
 </div>

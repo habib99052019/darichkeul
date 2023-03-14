@@ -51,58 +51,37 @@ export class FermeComponent implements OnInit {
   actsList:any = [
 
     {
-      title:"RESTAURANT",
-      image:"https://www.hotel-montana.ch/bilder/hauptbilder/restaurant-bar/_1200xAUTO_crop_center-center_100_none/2210_Scala-4.jpg",
+      title:"Agneau Bio",
+      image:"assets/img/photos_new_content/ferme/IMG_6646.jpg",
       //image:"assets/img/photos_new_content/les_salons/IMG_6891.jpg",
-      description:"Spa center inilla duiman at elit finibus viverra nec a lacus themo the drudea seneoice misuscipit non sagie the fermen. Viverra tristique jusio the ivite dianne onen nivami acsestion augue artine.",
+      description:"Nos viandes sont entièrement naturelles provenant d’animaux élevés sans hormone, sans antibiotique et sans substitut animal.Dans notre ferme Nous sommes fiers de travailler sans relâche afin que nos animaux soient élevés dans un environnement respectant les standards du bien-être animal.",
       period:"daily",
       start_at:"07",
       end_at:"08",
+      icon:"assets/img/photos_new_content/ferme/icon1.png",
       position_image:"left"
     },
     {
-      title:"PISCINE",
-      //image:"https://blog.cap-adrenaline.com/wp-content/uploads/2022/03/equipement-cours-equitation.jpg",
-      image:"assets/img/photos_new_content/les_slides/2d396e4f-86c9-4161-8d10-b06dded9ce67.jpg",
-      description:"",
+      title:"Frais et Propre",
+      image:"assets/img/photos_new_content/ferme/IMG_6664.jpg",
+      icon:"assets/img/photos_new_content/ferme/icon2.png",
+      //image:"assets/img/photos_new_content/les_salons/IMG_6891.jpg",
+      description:"En choisissant vos légumes et fruits de notre potager et de notre ferme agricole vous pouvez avoir confiance et comprendre ce que vous mangez, d'où vient le produit et la vie qu'il a vécue Nous pensons que les aliments biologiques sont meilleurs pour vous, meilleurs pour l'environnement, meilleurs pour les animaux et produisent une différence que vous pouvez goûter et apprécier.",
       period:"daily",
       start_at:"07",
       end_at:"08",
       position_image:"right"
-
     },
     {
-      title:"EQUITATION",
-      //image:"https://blog.cap-adrenaline.com/wp-content/uploads/2022/03/equipement-cours-equitation.jpg",
-      image:"assets/img/photos_new_content/equitation/169819305_740302160017677_5655585245396388206_n.jpg",
-      description:"Nous proposons  des balades  en montagne dans la région de Mateur.  Ce sont des chevaux adorables pour tous niveaux et tous âges ! Venez en famille, entre amis, ou même en amoureux…",
+      title:"Poulet et oeufs Bio",
+      image:"assets/img/photos_new_content/ferme/IMG_6640.jpg",
+      //image:"assets/img/photos_new_content/les_salons/IMG_6891.jpg",
+      description:"Nos poules biologiques errent librement autour de notre verger et des poiriers biologiques. Elles ne mangeant que des aliments biologiques naturels et toutes les délicieuses larves qu'elles peuvent déterrer !",
       period:"daily",
       start_at:"07",
       end_at:"08",
+      icon:"assets/img/photos_new_content/ferme/icon3.png",
       position_image:"left"
-
-    },
-    {
-      title:"TENNIS",
-      //image:"https://blog.cap-adrenaline.com/wp-content/uploads/2022/03/equipement-cours-equitation.jpg",
-      image:"assets/img/photos_new_content/tennis/IMG_6716.jpg",
-      description:"",
-      period:"daily",
-      start_at:"07",
-      end_at:"08",
-      position_image:"right"
-
-    },
-    {
-      title:"RANDONNÉE",
-      //image:"https://blog.cap-adrenaline.com/wp-content/uploads/2022/03/equipement-cours-equitation.jpg",
-      image:"assets/img/photos_new_content/les_slides/178483159_751807848867108_6722969823734392856_n.jpg",
-      description:"Nos randonnées accompagnées sont placées sous le signe de la convivialité et de l’exploration. Que vous ayez envie de bien-être, de découverte ou d’aventure,Partez en petit groupe découvrir les richesses d’une région ou d’un massif. Nos guides locaux, experts de leurs territoires et amoureux de la nature partageront avec vous leurs mille et une connaissances.",
-      period:"daily",
-      start_at:"07",
-      end_at:"08",
-      position_image:"left"
-
     }
 
   ]

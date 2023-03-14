@@ -2,27 +2,27 @@
     <div class="row" >
         <div class="col-md-12">
             <div class="input1_wrapper">
-              <label for="start-date">Date d'arriver:</label>
+              <label for="checkin">Date d'arrivée</label>
                 <div class="input1_inner">
-                  <input type="text" id="start-date" placeholder="Start Date" >
+                  <input type="text" id="checkin" class="form-control input datepicker" placeholder="Date d'arrivée" >
                 </div>
             </div>
         </div>
         <div class="col-md-12">
             <div class="input1_wrapper">
-              <label for="end-date">Dates Depart:</label>
+              <label for="end-date">Date départ</label>
               <div class="input1_inner">
-           <input type="text" id="end-date" placeholder="End Date">
+           <input type="text" id="checkout" class="form-control input datepicker" placeholder="Date départ">
               </div>
 
             </div>
         </div>
         <div class="col-md-6">
             <div class="select1_wrapper">
-                <label>Adults</label>
+                <label>Adultes</label>
                 <div class="select1_inner">
-                    <select class="select2 select" (change)="selctAdults($event)" style="width: 100%">
-                        <option value="0">Adults</option>
+                    <select class="select2 select" id="ad" (change)="selctAdults($event)" style="width: 100%">
+                        <option value="0">Adultes</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -35,7 +35,7 @@
             <div class="select1_wrapper">
                 <label>Children</label>
                 <div class="select1_inner">
-                    <select class="select2 select" style="width: 100%" (change)="selctEnfants($event)" >
+                    <select class="select2 select" id="en" style="width: 100%" (change)="selctEnfants($event)" >
                         <option value="0">Children</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -49,7 +49,7 @@
             <button type="button" class="btn-form1-submit mt-15" (click)="check()">Réserver</button>
         </div>
     </div>
-    <!-- <div class="row" >
+    <!--div class="row" >
         <div class="col-md-12">
             <div class="input1_wrapper">
                 <label>Date d'arrivée</label>
@@ -61,10 +61,10 @@
         </div>=
         <div class="col-md-12">
             <div class="input1_wrapper">
-                <label>Date de depart</label>
+                <label>Date de départ</label>
                 <div class="input1_inner">
                     <input type="text" class="form-control input datepicker"
-                        placeholder="Date de depart" id="dateDeb">
+                        placeholder="Date de départ" id="dateDeb">
                 </div>
             </div>
         </div>
@@ -99,5 +99,5 @@
         <div class="col-md-12">
             <button type="submit" class="btn-form1-submit mt-15">Réserver</button>
         </div>
-    </div> -->
+    </div-->
 </form>

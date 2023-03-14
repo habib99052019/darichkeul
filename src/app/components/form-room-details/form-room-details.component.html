@@ -2,26 +2,26 @@
   <div class="row">
     <div class="col-md-12">
       <div class="input1_wrapper">
-        <label>Check in</label>
+        <label>Date d'arrivée</label>
         <div class="input1_inner">
-          <input type="text" id="start-date" class="form-control input datepicker" placeholder="Check in">
+          <input type="text" id="start-date" class="form-control input datepicker" placeholder="Date d'arrivée">
         </div>
       </div>
     </div>
     <div class="col-md-12">
       <div class="input1_wrapper">
-        <label>Check out</label>
+        <label>Date de depart</label>
         <div class="input1_inner">
-          <input type="text"  id="end-date" class="form-control input datepicker" placeholder="Check out">
+          <input type="text"  id="end-date" class="form-control input datepicker" placeholder="Date de depart">
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="select1_wrapper">
-        <label>Adults</label>
+        <label>Adultes</label>
         <div class="select1_inner">
           <select class="select2 select" style="width: 100%" (change)="selctAdults($event)">
-            <option value="0">Adults</option>
+            <option value="0">Adultes</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -32,10 +32,10 @@
     </div>
     <div class="col-md-6">
       <div class="select1_wrapper">
-        <label>Children</label>
+        <label>Enfants</label>
         <div class="select1_inner">
           <select class="select2 select" style="width: 100%" (change)="selctEnfants($event)">
-            <option value="0">Children</option>
+            <option value="0">Enfants</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -52,41 +52,40 @@
 
 
 <div class="form1 clearfix"   *ngIf="step === 2">
- 
-    <!-- <div class="row" >
 
+    <div class="row" [formGroup]="user">
       <div class="col-md-12">
         <div class="input-reserv-room">
-          <input type="text" placeholder="Nom *" />
-          <label *ngIf="user.controls.nom.hasError('required') && this.user.controls.nom.touched" style="color: red;">le nom obligatoire</label>
+          <input type="text" placeholder="Nom *" formControlName="nom" />
+          <span *ngIf="user.controls.nom.hasError('required') && this.user.controls.nom.touched" style="color: red;">le nom obligatoire</span>
         </div>
       </div>
       <div class="col-md-12">
         <div class="input-reserv-room">
-          <input type="text" placeholder="Prénom *" />
-          <label *ngIf="user.controls.prenom.hasError('required') && this.user.controls.prenom.touched" style="color: red;">le prenom obligatoire</label>
+          <input type="text" placeholder="Prénom *" formControlName="prenom"/>
+          <span *ngIf="user.controls.prenom.hasError('required') && this.user.controls.prenom.touched" style="color: red;">le prenom obligatoire</span>
         </div>
       </div>
       <div class="col-md-12">
         <div class="input-reserv-room">
-          <input type="text" placeholder="Adresse email *" />
-          <label *ngIf="user.controls.email.hasError('required') && this.user.controls.email.touched" style="color: red;">email obligatoire</label>
-          <label *ngIf="user.controls.email.hasError('email') && this.user.controls.email.touched" style="color: red;">email non exact</label>
+          <input type="text" placeholder="Adresse email *"  formControlName="email"/>
+          <span *ngIf="user.controls.email.hasError('required') && this.user.controls.email.touched" style="color: red;">email obligatoire</span>
+          <span *ngIf="user.controls.email.hasError('email') && this.user.controls.email.touched" style="color: red;">email non exact</span>
         </div>
       </div>
       <div class="col-md-12">
         <div class="input-reserv-room">
-          <input type="text" placeholder="Numéro de téléphone *" (input)="validPhone($event)"/>
-          <label *ngIf="user.controls.phone.hasError('required') && this.user.controls.phone.touched" style="color: red;">phone obligatoire</label>
-          <label *ngIf="testLengthPhone" style="color: red;">phone non exact</label>
-          
-          
+          <input type="text" placeholder="Numéro de téléphone *" formControlName="phone" (input)="validPhone($event)"/>
+          <span *ngIf="user.controls.phone.hasError('required') && this.user.controls.phone.touched" style="color: red;">phone obligatoire</span>
+          <span *ngIf="!testLengthPhone" style="color: red;">phone non exact</span>
+
+
         </div>
       </div>
       <div class="col-md-12">
-        <button class="btn-form1-submit mt-15" (click)="getFn()">Confirmer</button>
+        <button class="btn-form1-submit mt-15" (click)="confirmer()">Confirmer</button>
       </div>
-    </div> -->
- 
-  
+    </div>
+
+
 </div>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api';
 import rooms from "../../data/room.json"
+import { FormControl, FormGroup , Validators } from '@angular/forms'
+
 
 declare var $:any;
 
@@ -11,9 +13,40 @@ declare var $:any;
 })
 export class SliderFormReservComponent implements OnInit {
 
+  formReserv = new FormGroup({
+    nom: new FormControl('',[Validators.required]),
+    prenom: new FormControl('',[Validators.required]),
+    email: new FormControl('',[Validators.required,Validators.email]),
+    mobile: new FormControl('',[Validators.required,Validators.min(8)]),
+  });
+
+  formReservMobile = new FormGroup({
+    Nom: new FormControl('',[Validators.required]),
+    Prenom: new FormControl('',[Validators.required]),
+    Email: new FormControl('',[Validators.required,Validators.email]),
+    Mobile: new FormControl('',[Validators.required,Validators.min(8)]),
+  });
+
+  checkPhone = true
+
+  validPhone(e:any){
+
+    if((e.target.value).length < 8){
+
+      this.checkPhone = false
+
+    }else{
+
+      this.checkPhone = true
+
+    }
+
+  }
+
+
   step = 1
 
-  constructor(private serv:ApiService) { }
+  constructor(public serv:ApiService) { }
 
 
   getPointer(){
@@ -44,13 +77,17 @@ export class SliderFormReservComponent implements OnInit {
 
   }
 
-  nextStep(){
+  nextStep(s1:any,s2:any){
     if(this.listRoomsSelected.length > 0){
       this.step++
+      s1.style.display = "none"
+      s2.style.display = "flex"
     }
   }
-  previousStep(){
+  previousStep(s1:any,s2:any){
     this.step--
+    s2.style.display = "none"
+    s1.style.display = "block"
   }
 
   nextStepForm(s1:any,s2:any){
@@ -67,7 +104,7 @@ export class SliderFormReservComponent implements OnInit {
     s1.style.display = "flex"
     this.step--
   }
-  
+
 
   phoneScreen:any
   isMobile = false
@@ -78,7 +115,7 @@ export class SliderFormReservComponent implements OnInit {
     this.serv.isReservOpened = false
   }
 
-  roomsList:any[] = rooms
+  roomsList:any = rooms
 
   listRoomsSelected:any = []
 
@@ -98,7 +135,7 @@ export class SliderFormReservComponent implements OnInit {
 
           if(this.listRoomsSelected[i].id === room.id){
             this.listRoomsSelected.splice(i)
-          }  
+          }
 
       }
       this.roomSelected = document.getElementById("room-slide-"+room.id)
@@ -113,11 +150,30 @@ export class SliderFormReservComponent implements OnInit {
 
   closePcForm(e:any){
 
-    if (e.target.className === 'form-reservation') {
+    if (e.target.className === 'form-reservation' || e.target.className === "close-btn") {
 
       this.serv.isReservOpened = false
 
     }
+  }
+
+  confirmReservation(){
+    var text1=this.formReserv.value.nom + " "  +this.formReserv.value.prenom + " "+this.formReserv.value.email+" " +this.formReserv.value.mobile
+    var text2=this.formReservMobile.value.Nom + " "  +this.formReservMobile.value.Prenom + " "+this.formReservMobile.value.Email+" " +this.formReservMobile.value.Mobile
+    var text3=this.serv.formReservation.toString()
+    var text=text1 +" " +text2 + " " +  JSON.stringify(this.serv.formReservation);
+    var email=this.formReserv.value.email+""+this.formReservMobile.value.Email+""
+    console.log(text)
+    console.log(email)
+    this.serv.sendEmail({
+      email:email,
+      text:text
+    })
+    this.serv.isReservConfirmed = true
+
+    setTimeout(()=>{
+      this.serv.isReservConfirmed = false
+    },3300)
   }
 
 
@@ -125,9 +181,13 @@ export class SliderFormReservComponent implements OnInit {
 
     $(document).ready(()=>{
 
-      this.stepForm = document.getElementById("stepMobile2")
+      this.stepForm = document.getElementById("stepTwo")
 
-      this.stepForm.setAttribute("style","display: none;")
+      // this.stepForm.setAttribute("style","display: none;")
+
+      this.stepForm = document.getElementById("stepTwoMobile")
+
+      // this.stepForm.setAttribute("style","display: none;")
 
 
     })
@@ -141,12 +201,6 @@ export class SliderFormReservComponent implements OnInit {
       this.isMobile = true
 
     }
-
-    console.log(this.isMobile)
-
-    setTimeout(()=>{
-      this.serv.isReservOpened = true
-    },5000)
 
   }
 

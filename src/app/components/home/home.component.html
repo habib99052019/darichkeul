@@ -1,5 +1,3 @@
-<app-slider-form-reserv></app-slider-form-reserv>
-
 <div>
     <!-- Progress scroll totop -->
     <div class="progress-wrap cursor-pointer">
@@ -89,50 +87,67 @@
                 <form action="https://Garrach Sabri/demo/html/cappa/demo1-light/rooms.html" class="form1 clearfix">
                     <div class="col1 c1">
                         <div class="input1_wrapper">
-                            <label>Check in</label>
+                            <label>Date d'arrivée</label>
                             <div class="input1_inner">
-                                <input type="text" id="start-date" class="form-control input datepicker" placeholder="Check in">
+                                <input type="text" id="checkin" class="form-control input datepicker" placeholder="Date d'arrivée">
                             </div>
                         </div>
                     </div>
                     <div class="col1 c2">
                         <div class="input1_wrapper">
-                            <label>Check out</label>
+                            <label>Date de départ</label>
                             <div class="input1_inner">
-                                <input type="text " id="end-date" class="form-control input datepicker" placeholder="Check out">
+                                <input type="text " id="checkout" class="form-control input datepicker" placeholder="Date de depart">
                             </div>
                         </div>
                     </div>
                     <div class="col2 c3">
                         <div class="select1_wrapper">
-                            <label>Adults</label>
+                            <label>Adultes</label>
                             <div class="select1_inner">
-                                <select class="select2 select" style="width: 100%" (change)="selctAdults($event)">
-                                    <option value="1">1 Adult</option>
-                                    <option value="2">2 Adults</option>
-                                    <option value="3">3 Adults</option>
-                                    <option value="4">4 Adults</option>
+                                <select class="select2 select"id="ad" style="width: 100%" (change)="selctAdults($event)">
+                                    <option value="0">Adultes</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="col2 c4">
                         <div class="select1_wrapper">
-                            <label>Children</label>
+                            <label>Enfants</label>
                             <div class="select1_inner">
-                                <select class="select2 select" style="width: 100%" (change)="selctEnfants($event)">
-                                    <option value="1">Children</option>
-                                    <option value="1">1 Child</option>
-                                    <option value="2">2 Children</option>
-                                    <option value="3">3 Children</option>
-                                    <option value="4">4 Children</option>
+                                <select class="select2 select" id="en" style="width: 100%" (change)="selctEnfants($event)">
+                                    <option value="1">Enfants</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                   
+
                     <div class="col3 c6">
-                        <button type="button" (click)="check()">Check Now</button>
+                        <button type="button" (click)="check()" style="display: block;
+    padding: 0;
+    border: none;
+    margin: 0;
+    width: 100%;
+    background: #aa8453;
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 62.5px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+">Réserver</button>
                     </div>
                 </form>
             </div>
@@ -180,14 +195,14 @@
                 </div>
             </div>
             <div class="row">
-                
+
                 <div class="col-md-4">
                     <a [href]="'/room/'+suits[0].id">
                         <div class="item">
                             <div class="position-re o-hidden"> <img [src]="suits[0].gridimage" alt=""> </div> <span
                                 class="category"><a [href]="'/room/'+suits[0].id">Reserver</a></span>
                             <div class="con">
-                                <h6><a href="room-details.html">{{suits[0].price}} $ / Night</a></h6>
+                                <h6><a href="room-details.html">{{suits[0].price}} DT / Night</a></h6>
                                 <h5><a href="room-details.html">{{suits[0].title}}</a> </h5>
                                 <div class="line"></div>
                                 <div class="row facilities">
@@ -215,7 +230,7 @@
                             <div class="position-re o-hidden"> <img [src]="suits[1].gridimage" alt=""> </div> <span
                                 class="category"><a [href]="'/room/'+suits[1].id">Reserver</a></span>
                             <div class="con">
-                                <h6><a href="room-details.html">{{suits[1].price}} $/ Night</a></h6>
+                                <h6><a href="room-details.html">{{suits[1].price}} DT/ Night</a></h6>
                                 <h5><a href="room-details.html">{{suits[1].title}}</a></h5>
                                 <div class="line"></div>
                                 <div class="row facilities">
@@ -242,7 +257,7 @@
                             <div class="position-re o-hidden"> <img [src]="suits[2].gridimage" alt=""> </div> <span
                                 class="category"><a [href]="'/room/'+suits[2].id">Reserver</a></span>
                             <div class="con">
-                                <h6><a href="room-details.html">{{suits[2].price}}$ / Night</a></h6>
+                                <h6><a href="room-details.html">{{suits[2].price}}DT / Night</a></h6>
                                 <h5><a href="room-details.html">{{suits[2].title}}</a></h5>
                                 <div class="line"></div>
                                 <div class="row facilities">
@@ -269,7 +284,7 @@
                             <div class="position-re o-hidden"> <img [src]="suits[3].gridimage" alt=""> </div> <span
                                 class="category"><a [href]="'/room/'+suits[3].id">Reserver</a></span>
                             <div class="con">
-                                <h6><a href="room-details.html">{{suits[3].price}}$ / Night</a></h6>
+                                <h6><a href="room-details.html">{{suits[3].price}}DT / Night</a></h6>
                                 <h5><a href="room-details.html">{{suits[3].title}}</a></h5>
                                 <div class="line"></div>
                                 <div class="row facilities">
@@ -296,7 +311,7 @@
                             <div class="position-re o-hidden"> <img [src]="suits[4].gridimage" alt=""> </div> <span
                                 class="category"><a [href]="'/room/'+suits[4].id">Reserver</a></span>
                             <div class="con">
-                                <h6><a href="room-details.html">{{suits[4].price}}$ / Night</a></h6>
+                                <h6><a href="room-details.html">{{suits[4].price}}DT / Night</a></h6>
                                 <h5><a href="room-details.html">{{suits[4].title}}</a></h5>
                                 <div class="line"></div>
                                 <div class="row facilities">
@@ -323,7 +338,7 @@
                             <div class="position-re o-hidden"> <img [src]="suits[5].gridimage" alt=""> </div> <span
                                 class="category"><a [href]="'/room/'+suits[5].id">Reserver</a></span>
                             <div class="con">
-                                <h6><a href="room-details.html">{{suits[5].price}}$ / Night</a></h6>
+                                <h6><a href="room-details.html">{{suits[5].price}}DT / Night</a></h6>
                                 <h5><a href="room-details.html">{{suits[5].title}}</a></h5>
                                 <div class="line"></div>
                                 <div class="row facilities">
@@ -350,7 +365,7 @@
                             <div class="position-re o-hidden"> <img [src]="suits[6].gridimage" alt=""> </div> <span
                                 class="category"><a [href]="'/room/'+suits[6].id">Reserver</a></span>
                             <div class="con">
-                                <h6><a href="room-details.html">{{suits[6].price}}$ / Night</a></h6>
+                                <h6><a href="room-details.html">{{suits[6].price}}DT / Night</a></h6>
                                 <h5><a href="room-details.html">{{suits[6].title}}</a></h5>
                                 <div class="line"></div>
                                 <div class="row facilities">
@@ -377,7 +392,7 @@
                             <div class="position-re o-hidden"> <img [src]="suits[7].gridimage" alt=""> </div> <span
                                 class="category"><a [href]="'/room/'+suits[7].id">Reserver</a></span>
                             <div class="con">
-                                <h6><a href="room-details.html">{{suits[7].price}}$ / Night</a></h6>
+                                <h6><a href="room-details.html">{{suits[7].price}}DT / Night</a></h6>
                                 <h5><a href="room-details.html">{{suits[7].title}}</a></h5>
                                 <div class="line"></div>
                                 <div class="row facilities">
@@ -406,66 +421,52 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="section-subtitle"><span>Best Prices</span></div>
-                    <div class="section-title"><span>Extra Services</span></div>
-                    <p class="color-2">The best prices for your relaxing vacation. The utanislen quam nestibulum ac
-                        quame odion elementum sceisue the aucan.</p>
-                    <p class="color-2">Orci varius natoque penatibus et magnis disney parturient monte nascete ridiculus
-                        mus nellen etesque habitant morbine.</p>
+                    <div class="section-subtitle"><span>Réstaurant</span></div>
+                    <div class="section-title"><span>Extrat plâts</span></div>
+                    <p class="color-2">
+                    Le poulailler, la campagne, les cages… Chaque espace représente une ambiance champêtre et définit les caractéristiques propres de la vie agricole. Un défi des plus intéressants qui se relève merveilleusement grâce au jeu intense de couleurs, matériaux et textures.</p>
                     <div class="reservations mb-30">
                         <div class="icon"><span class="flaticon-call"></span></div>
                         <div class="text">
-                            <p class="color-2">For information</p> <a href="tel:855-100-4444">+216 27 595 239</a>
+                            <p class="color-2">Réserver</p> <a href="tel:+21627595239">+216 27 595 239</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="owl-carousel owl-theme">
                         <div class="pricing-card">
-                            <img src="assets/img/pricing/1.jpg" alt="">
+                            <img src='assets/img/froide.png' alt="">
                             <div class="desc">
-                                <div class="name">Room cleaning</div>
-                                <div class="amount">$50<span>/ month</span></div>
+                                <div class="name">ENTRÉE FROIDE</div>
+                                <div class="amount">44 DT<span></span></div>
                                 <ul class="list-unstyled list">
-                                    <li><i class="ti-check"></i> Hotel ut nisan the duru</li>
-                                    <li><i class="ti-check"></i> Orci miss natoque vasa ince</li>
-                                    <li><i class="ti-close unavailable"></i>Clean sorem ipsum morbin</li>
+                                    <li><i class="ti-check"></i> Salade tunisienne</li>
+                                    <li><i class="ti-check"></i> Salade niçoise</li>
+                                    <li><i class="ti-check"></i>Salade César</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="pricing-card">
-                            <img src="assets/img/pricing/2.jpg" alt="">
+                            <img src="https://cac.img.pmdstatic.net/scale/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2019.2F10.2F08.2Fc632053a-39f7-4c73-8baa-fc2e082c393a.2Ejpeg/autox600/quality/65/crop-zone/0,2298-4912x2763/saint-jacques-gratinees-au-saumon-et-crevettes.jpg" alt="">
                             <div class="desc">
-                                <div class="name">Drinks included</div>
-                                <div class="amount">$30<span>/ daily</span></div>
+                                <div class="name">ENTRÉE CHAUDE</div>
+                                <div class="amount">29 DT<span></span></div>
                                 <ul class="list-unstyled list">
-                                    <li><i class="ti-check"></i> Hotel ut nisan the duru</li>
-                                    <li><i class="ti-check"></i> Orci miss natoque vasa ince</li>
-                                    <li><i class="ti-close unavailable"></i>Clean sorem ipsum morbin</li>
+                                    <li><i class="ti-check"></i> Soupe à l'agneau</li>
+                                    <li><i class="ti-check"></i> Brik au thion</li>
+                                    <li><i class="ti-close"></i>Brik à la viande</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="pricing-card">
-                            <img src="assets/img/pricing/3.jpg" alt="">
+                            <img src="assets/img/pate.png" alt="">
                             <div class="desc">
-                                <div class="name">Room Breakfast</div>
-                                <div class="amount">$30<span>/ daily</span></div>
+                                <div class="name">PÂTES</div>
+                                <div class="amount">42 DT<span></span></div>
                                 <ul class="list-unstyled list">
-                                    <li><i class="ti-check"></i> Hotel ut nisan the duru</li>
-                                    <li><i class="ti-check"></i> Orci miss natoque vasa ince</li>
-                                    <li><i class="ti-close unavailable"></i>Clean sorem ipsum morbin</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pricing-card">
-                            <img src="assets/img/pricing/4.jpg" alt="">
-                            <div class="desc">
-                                <div class="name">Safe & Secure</div>
-                                <div class="amount">$15<span>/ daily</span></div>
-                                <ul class="list-unstyled list">
-                                    <li><i class="ti-check"></i> Hotel ut nisan the duru</li>
-                                    <li><i class="ti-check"></i> Orci miss natoque vasa ince</li>
-                                    <li><i class="ti-close unavailable"></i>Clean sorem ipsum morbin</li>
+                                    <li><i class="ti-check"></i> Nwasser au poulet fermier</li>
+                                    <li><i class="ti-check"></i> Spaghettis Bolognaises</li>
+                                    <li><i class="ti-check"></i> Eau gazeuse 1L</li>
                                 </ul>
                             </div>
                         </div>
@@ -513,8 +514,8 @@
                 <div class="col-md-4">
                     <div class="single-facility animate-box" data-animate-effect="fadeInUp">
                         <span class="flaticon-world"></span>
-                        <h5>Aéroport</h5>
-                        <p>We’ll pick up from airport while you comfy on your ride, mus nellentesque habitant.</p>
+                        <h5>Transfert de l'aéropor</h5>
+                        <p>Profitez de la tranquillité d'esprit dès votre arrivée à Tunis. Pré-réservez un transfert aéroport- Dar Ichkeul et notre chauffeur  vous attendra dans le hall des arrivées. </p>
                         <div class="facility-shape"> <span class="flaticon-world"></span> </div>
                     </div>
                 </div>
@@ -522,31 +523,30 @@
                     <div class="single-facility animate-box" data-animate-effect="fadeInUp">
                         <span class="flaticon-car"></span>
                         <h5>Parking</h5>
-                        <p>Fusce tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.</p>
+                        <p>Dar ichkeul dispose d'un parking gratuit pour tous ses clients</p>
                         <div class="facility-shape"> <span class="flaticon-car"></span> </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="single-facility animate-box" data-animate-effect="fadeInUp">
-                        <span class="flaticon-bed"></span>
+                        <span class="flaticon-breakfast"></span>
                         <h5>Petit déjeuner</h5>
-                        <p>Room tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.</p>
-                        <div class="facility-shape"> <span class="flaticon-bed"></span> </div>
+                        <p>Avec notre offre Petit-déjeuner inclus, réveillez-vous en douceur et profitez d'un moment gourmand pendant votre séjour.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <!--div class="col-md-4">
                     <div class="single-facility animate-box" data-animate-effect="fadeInUp">
                         <span class="flaticon-swimming"></span>
                         <h5>piscine</h5>
                         <p>Swimming pool tincidunt nise ace park norttito sit space, mus nellentesque habitant.</p>
                         <div class="facility-shape"> <span class="flaticon-swimming"></span> </div>
                     </div>
-                </div>
+                </div-->
                 <div class="col-md-4">
                     <div class="single-facility animate-box" data-animate-effect="fadeInUp">
                         <span class="flaticon-wifi"></span>
                         <h5>Wifi</h5>
-                        <p>Wifi tincidunt nis ace park norttito sit amet space, mus nellentesque habitant.</p>
+                        <p>accès au Wi-Fi gratuit, rapide et facilement accessible dans toutes les parties communes et dans l’ensemble des chambres.</p>
                         <div class="facility-shape"> <span class="flaticon-wifi"></span> </div>
                     </div>
                 </div>
@@ -554,7 +554,7 @@
                     <div class="single-facility animate-box" data-animate-effect="fadeInUp">
                         <span class="flaticon-breakfast"></span>
                         <h5>Café Nespresso</h5>
-                        <p>Eat tincidunt nisa ace park norttito sit amet space, mus nellentesque habitant</p>
+                        <p>Dans le cadre d'un séjour inoubliable dans notre établissement , nos clients se souviendront d'une tasse de café Nespresso exceptionnelle, d’un délicieux thé à la menthe, d’une citronnade fraîche ou autres boissons délicieuses.</p>
                         <div class="facility-shape"> <span class="flaticon-breakfast"></span> </div>
                     </div>
                 </div>
@@ -641,7 +641,7 @@
                     <div class="img left">
                         <a><img [src]="item.image" alt=""></a>
                     </div>
-                </div> 
+                </div>
                 <div class="col-md-6 p-0 bg-cream valign animate-box" *ngIf="item.position_image === 'left'" data-animate-effect="fadeInRight">
                     <div class="content">
                         <div class="cont text-left">
@@ -746,213 +746,81 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-subtitle"><span>Dar ichkeul</span></div>
-                    <div class="section-title"><span>Actualités</span></div>
+                    <div class="section-title"><span>Nos activités</span></div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="assets/img/news/1.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="assets/img/photos_new_content/new/image_67515137.jpg" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>02</i> </a>
+                                    <a href="/restaurant"> <span>Détails</span> <i></i> </a>
                                 </div>
                             </div>
                             <div class="con"> <span class="category">
-                                    <a href="news.html">Restaurant</a>
+                                    <a  href="/restaurant">RESTAURANT</a>
                                 </span>
-                                <h5><a href="post.html">Historic restaurant renovated</a></h5>
+                                <h5><a href="/restaurant">Le poulailler, la campagne, les cages…</a></h5>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="assets/img/news/2.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="assets/img/photos_new_content/new/image_6483441.jpg" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>04</i> </a>
+                                    <a href="/activités"> <span>Détails</span> <i></i> </a>
                                 </div>
                             </div>
                             <div class="con"> <span class="category">
-                                    <a href="news.html">Spa</a>
+                                    <a href="/activités">PISCINE</a>
                                 </span>
-                                <h5><a href="post.html">Benefits of Spa Treatments</a></h5>
+                                <h5><a href="/activités">La température monte et il est temps de se rafraîchir.</a></h5>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="assets/img/news/3.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="assets/img/photos_new_content/new/equitation2.png" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>06</i> </a>
+                                    <a href="/activités"> <span>Détails</span> <i></i> </a>
                                 </div>
                             </div>
                             <div class="con"> <span class="category">
-                                    <a href="news.html">Bathrooms</a>
+                                    <a href="/activités">EQUITATION</a>
                                 </span>
-                                <h5><a href="post.html">Hotel Bathroom Collections</a></h5>
+                                <h5><a href="/activités">Nous proposons  des balades  en montagne dans la région de Mateur</a></h5>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="assets/img/news/4.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="assets/img/photos_new_content/new/tennis2.png" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>08</i> </a>
+                                    <a href="/activités"> <span>Détails</span> <i></i> </a>
                                 </div>
                             </div>
                             <div class="con">
                                 <span class="category">
-                                    <a href="news.html">Health</a>
+                                    <a href="/activités">TENNIS</a>
                                 </span>
-                                <h5><a href="post.html">Weight Loss with Fitness Health Club</a></h5>
+                                <h5><a href="/activités">Nous gérons le terrain de tennis face à Dar ichkeul, complètement refait en terre battue.</a></h5>
                             </div>
                         </div>
 
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="assets/img/news/6.jpg" alt="">
+                            <div class="position-re o-hidden"> <img src="assets/img/photos_new_content/new/rondonné2.png" alt="">
                                 <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>08</i> </a>
+                                    <a href="/activités"> <span>Détails</span> <i></i> </a>
                                 </div>
                             </div>
                             <div class="con"> <span class="category">
-                                    <a href="news.html">Design</a>
+                                    <a href="/activités">RANDONNÉE</a>
                                 </span>
-                                <h5><a href="post.html">Retro Lighting Design in The Hotels</a></h5>
+                                <h5><a href="/activités">Nos randonnées accompagnées sont placées sous le signe de la convivialité et de l’exploration</a></h5>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="assets/img/news/5.jpg" alt="">
-                                <div class="date">
-                                    <a href="post.html"> <span>Dec</span> <i>08</i> </a>
-                                </div>
-                            </div>
-                            <div class="con"> <span class="category">
-                                    <a href="news.html">Health</a>
-                                </span>
-                                <h5><a href="post.html">Benefits of Swimming for Your Health</a></h5>
-                            </div>
-                        </div>
-
-
-                    </div>
+                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Reservation & Booking Form -->
-    <section class="testimonials">
-        <div class="background bg-img bg-fixed section-padding pb-0" data-background="assets/img/photos_new_content/les_slides/178483159_751807848867108_6722969823734392856_n.jpg"
-            data-overlay-dark="2">
-            <div class="container">
-                <div class="row">
-                    <!-- Reservation -->
-                    <div class="col-md-5 mb-30 mt-30">
-                        <p><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i
-                                class="star-rating"></i><i class="star-rating"></i></p>
-                        <h5>Each of our guest rooms feature a private bath, wi-fi, cable television and include full
-                            breakfast.</h5>
-                        <div class="reservations mb-30">
-                            <div class="icon color-1"><span class="flaticon-call"></span></div>
-                            <div class="text">
-                                <p class="color-1">Reservation</p> <a class="color-1" href="tel:855-100-4444">
-                                +216 27 595 239</a>
-                            </div>
-                        </div>
-                        <p><i class="ti-check"></i><small>Call us, it's toll-free.</small></p>
-                    </div>
-                    <!-- Booking From -->
-                    <div class="col-md-5 offset-md-2">
-                        <div class="booking-box">
-                            <div class="head-box">
-                                <h6>Nos suites</h6>
-                                <h4>Hotel Booking Form</h4>
-                            </div>
-                            <div class="booking-inner clearfix">
-                                <form action="https://Garrach Sabri/demo/html/cappa/demo1-light/rooms2.html"
-                                    class="form1 clearfix">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="input1_wrapper">
-                                                <label>Check in</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="form-control input datepicker"
-                                                        placeholder="Check in">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="input1_wrapper">
-                                                <label>Check out</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="form-control input datepicker"
-                                                        placeholder="Check out">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="select1_wrapper">
-                                                <label>Adults</label>
-                                                <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Adults</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="select1_wrapper">
-                                                <label>Children</label>
-                                                <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Children</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <button type="submit" class="btn-form1-submit mt-15">Check
-                                                Availability</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Clients -->
-    <section class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="owl-carousel owl-theme">
-                        <div class="clients-logo">
-                            <a href="#0"><img src="assets/img/clients/1.png" alt=""></a>
-                        </div>
-                        <div class="clients-logo">
-                            <a href="#0"><img src="assets/img/clients/2.png" alt=""></a>
-                        </div>
-                        <div class="clients-logo">
-                            <a href="#0"><img src="assets/img/clients/3.png" alt=""></a>
-                        </div>
-                        <div class="clients-logo">
-                            <a href="#0"><img src="assets/img/clients/4.png" alt=""></a>
-                        </div>
-                        <div class="clients-logo">
-                            <a href="#0"><img src="assets/img/clients/5.png" alt=""></a>
-                        </div>
-                        <div class="clients-logo">
-                            <a href="#0"><img src="assets/img/clients/6.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- Footer -->
 
 

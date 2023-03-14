@@ -1,0 +1,65 @@
+.message-box-confirm{
+	position: fixed;
+	bottom: 4%;
+	width: 30%;
+	transition: .5s;
+	z-index: 900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+}
+
+.message-box-confirm .desktop-version{
+
+	width: 100%;
+	padding: 5% 3%;
+	border-left: .3vw solid #caa16d;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	box-shadow: 0 0 .2vw 0 black;
+	font-size: 1.4vw;
+
+}
+
+.message-box-confirm .desktop-version i{
+
+	margin-right: 3%;
+	font-size: 1.6vw;
+	color: green;
+
+}
+
+@media (max-width:700px){
+
+
+	.message-box-confirm{
+
+		position: fixed;
+		bottom: 4%;
+		width: 92%;
+		transition: .5s;
+		z-index: 900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+	
+	}
+
+	.message-box-confirm .desktop-version{
+
+		width: 100%;
+		padding: 5% 3%;
+		border-left: .3vw solid #caa16d;
+		display: flex;
+		align-items: center;
+		background-color: white;
+		box-shadow: 0 0 .2vw 0 black;
+		font-size: 17px;
+
+	}
+
+	.message-box-confirm .desktop-version i{
+
+		margin-right: 3%;
+		font-size: 20px;
+		color: green;
+
+	}
+
+
+}

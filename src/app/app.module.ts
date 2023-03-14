@@ -17,6 +17,9 @@ import { FermeComponent } from './components/ferme/ferme.component';
 import { FormGlobalComponent } from './components/form-global/form-global.component';
 import { FormRoomDetailsComponent } from './components/form-room-details/form-room-details.component';
 import { SliderFormReservComponent } from './components/slider-form-reserv/slider-form-reserv.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TableDHoteComponent } from './components/table-d-hote/table-d-hote.component';
+
 
 
 @NgModule({
@@ -33,12 +36,15 @@ import { SliderFormReservComponent } from './components/slider-form-reserv/slide
     FermeComponent,
     FormGlobalComponent,
     FormRoomDetailsComponent,
-    SliderFormReservComponent
+    SliderFormReservComponent,
+    TableDHoteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
