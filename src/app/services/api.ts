@@ -31,6 +31,10 @@ export class ApiService {
 
   roomsListFilter:any
 
+  // edheya objet mtaa les rooms selectés fi form du reservation
+
+  rommsSelectedFromReserv:any
+
   constructor(private http : HttpClient){} //private snackBar: MatSnackBar) { }
 
 

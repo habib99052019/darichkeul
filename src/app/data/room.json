@@ -4,6 +4,7 @@
         "title": "Bonnelli",
         "price": 210,
         "period": "Nuit",
+        "presonneMax":2,
         "category": [
             1
         ],
@@ -89,6 +90,7 @@
         "title": "Cigogne",
         "price": 265,
         "period": "Nuit",
+        "presonneMax":2,
         "category": [
             2
         ],
@@ -173,6 +175,7 @@
         "title": "Amorpha",
         "price": 245,
         "period": "Nuit",
+        "presonneMax":2,
         "category": [
             3
         ],
@@ -257,6 +260,7 @@
         "title": "Ruppia",
         "price": 245,
         "period": "Nuit",
+        "presonneMax":3,
         "category": [
             4
         ],
@@ -342,6 +346,7 @@
         "title": "Ciconia",
         "price": 230,
         "period": "Nuit",
+        "presonneMax":2,
         "category": [
             5
         ],
@@ -426,6 +431,7 @@
         "id": 6,
         "title": "Colony",
         "price": 385,
+        "presonneMax":4,
         "period": "Nuit",
         "category": [
             2
@@ -513,12 +519,13 @@
         "title": "Marabou",
         "price": 300,
         "period": "Nuit",
+        "presonneMax":2,
         "category": [
             2
         ],
-        "gridimage": "https://images.bestwestern.com/bwi/brochures/93610/photos/1024/26029126.jpg",
-        "listimage": "https://images.bestwestern.com/bwi/brochures/93610/photos/1024/26029126.jpg",
-        "sliderimage": ["https://images.bestwestern.com/bwi/brochures/93610/photos/1024/26029126.jpg","https://www.dispano.fr/sites/default/files/2022-08/salle-de-bain-panneau-mural-solution-esthetique-economique-banniere-une-dispano.jpg"],
+        "gridimage": "assets/img/photos_new_content/marabou/image_67164929.JPG",
+        "listimage": "assets/img/photos_new_content/marabou/image_67164929.JPG",
+        "sliderimage": ["assets/img/photos_new_content/marabou/image_67164929.JPG"],
         "text": "Suite Vue sur la Piscine",
         "longdesc": "<p>Une suite vue sur la Piscine vous offre le calme et la beauté de la nature</p>",
         "authors": [
@@ -597,12 +604,13 @@
         "title": "Brecon",
         "price": 335,
         "period": "Nuit",
+        "presonneMax":2,
         "category": [
             2
         ],
-        "gridimage": "https://www.yonder.fr/sites/default/files/destinations/la%20badira%20Suite%20Cocteau%20chambre.jpg",
-        "listimage": "https://www.yonder.fr/sites/default/files/destinations/la%20badira%20Suite%20Cocteau%20chambre.jpg",
-        "sliderimage": ["https://www.yonder.fr/sites/default/files/destinations/la%20badira%20Suite%20Cocteau%20chambre.jpg","https://djwn2awl267ga.cloudfront.net/cache/img/maison-mere-suite-reine-mere-ecran-ultra-hd-119340-1920-1080-auto.jpg?q=1664286121"],
+        "gridimage": "assets/img/photos_new_content/brecon/C85A6495.jpg",
+        "listimage": "assets/img/photos_new_content/brecon/C85A6495.jpg",
+        "sliderimage": ["assets/img/photos_new_content/brecon/C85A6495.jpg","assets/img/photos_new_content/brecon/C85A6570.jpg","assets/img/photos_new_content/brecon/C85A6572.jpg","assets/img/photos_new_content/brecon/C85A6577.jpg"],
         "text": "Suite De Luxe avec Vue panoramique",
         "longdesc": "<p>Suite De Luxe avec Vue panoramique un suite moderne et luxueux baigné de lumière naturelle, offrant un intérieur chaleureux et apaisant avec un fabuleux paysage, vous permet de contempler la beauté de la ville, de jour comme de nuit</p>",
         "authors": [

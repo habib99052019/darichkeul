@@ -28,16 +28,9 @@ export class FormGlobalComponent implements OnInit {
   depart:any
  dateArrive:any
  dateFin:any
- adults=""
-  childrens=""
-  public selctAdults(e:any){
-    this.adults=e.target.value
-
-  }
-
-  public selctEnfants(e:any){
-    this.childrens=e.target.value
-  }
+ adults:any
+  childrens:any
+  
   //date d'arrrivé // [min]="todayDate" class="date-picker-no-show" (dateChange)="this.getDateDebutValue($event,dateDebutMobile)"  [matDatepickerFilter]="DateNoDispoFilter2"
   // date de depare // [min]="DateArr" [max]="maxResvation" class="date-picker-no-show" (dateChange)="this.getDateFinValue($event,dateFinMobile)"
   DateNoDispoFilter2= (d: Date): boolean => {
@@ -83,10 +76,10 @@ export class FormGlobalComponent implements OnInit {
     var fin=this.dateFin.value.toString()
 
 
-    var d1=Ar.split('-').reverse().join('/')
-
-    var d2=fin.split('-').reverse().join('/')
-
+    var t1=Ar.split('/')
+  var t2=fin.split('/')
+ var  d1=t1[1]+"/"+t1[0]+"/"+t1[2]
+ var  d2=t2[1]+"/"+t2[0]+"/"+t2[2]
       //console.log(new Date(d1),'valueee')
 
 
@@ -162,14 +155,15 @@ export class FormGlobalComponent implements OnInit {
 
         //console.log(this.apiService.roomsListFilter)
 
-
+    this.adults =document.getElementById("ad")
+    this.childrens=document.getElementById("en")
      this.apiService.formReservation={
       dateStrat:d1,
       dateFin:d2,
-      childrens:this.apiService.enfant.value,
-          adults:this.apiService.adultes.value
+      childrens:this.adults.value,
+          adults:this.childrens.value
      }
-
+  console.log(this.apiService.formReservation)
   }
 
   // getDateFinValue(e:any,dateInput:any){
@@ -193,8 +187,7 @@ export class FormGlobalComponent implements OnInit {
   ngOnInit() {
     this.dateArrive=document.getElementById("checkin")
     this.dateFin=document.getElementById("checkout")
-    this.apiService.adultes=document.getElementById("ad")
-    this.apiService.enfant=document.getElementById("en")
+   
     this.apiService.getSingleSuiteToute().subscribe((res:any)=>{
       var newArray = Array.prototype.concat.apply([], res);
       newArray=newArray.map(ele=>ele.slice(0,10))

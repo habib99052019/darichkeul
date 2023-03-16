@@ -79,9 +79,27 @@ export class SliderFormReservComponent implements OnInit {
 
   nextStep(s1:any,s2:any){
     if(this.listRoomsSelected.length > 0){
-      this.step++
-      s1.style.display = "none"
-      s2.style.display = "flex"
+       const pers=0
+      var test= Number(this.serv.formReservation.childrens)+ Number(this.serv.formReservation.adults)
+    console.log(this.listRoomsSelected)
+      // var  sum = this.listRoomsSelected.reduce((a:any, b:any) => {
+      //   console.log(personneMax)
+      //   return a.personneMax + b.personneMax;
+      // });
+      var sum=0
+      for (let i = 0; i < this.listRoomsSelected.length; i++) {
+        sum=sum+this.listRoomsSelected[i].presonneMax;
+      }
+      console.log(sum ,test ,'comùpare')
+      if(test>sum){
+         alert("les nombres des personnes sont supérieur a la capacité de suites veuiller choisir d'autres suites ")
+      }
+      else{
+        this.step++
+        s1.style.display = "none"
+        s2.style.display = "flex"
+      }
+ 
     }
   }
   previousStep(s1:any,s2:any){
@@ -130,6 +148,7 @@ export class SliderFormReservComponent implements OnInit {
       this.roomSelected = document.getElementById("room-slide-"+room.id)
       this.roomSelected.style.backgroundColor="#e7c283"
       this.roomSelected.style.color="white"
+      this.serv.rommsSelectedFromReserv = this.listRoomsSelected
     }else{
       for(var i = 0 ; i < this.listRoomsSelected.length ; i++){
 
@@ -141,6 +160,7 @@ export class SliderFormReservComponent implements OnInit {
       this.roomSelected = document.getElementById("room-slide-"+room.id)
       this.roomSelected.style.backgroundColor="transparent"
       this.roomSelected.style.color="transparent"
+      this.serv.rommsSelectedFromReserv = this.listRoomsSelected
     }
 
   }
@@ -160,8 +180,8 @@ export class SliderFormReservComponent implements OnInit {
   confirmReservation(){
     var text1=this.formReserv.value.nom + " "  +this.formReserv.value.prenom + " "+this.formReserv.value.email+" " +this.formReserv.value.mobile
     var text2=this.formReservMobile.value.Nom + " "  +this.formReservMobile.value.Prenom + " "+this.formReservMobile.value.Email+" " +this.formReservMobile.value.Mobile
-    var text3=this.serv.formReservation.toString()
-    var text=text1 +" " +text2 + " " +  JSON.stringify(this.serv.formReservation);
+    var text3=this.listRoomsSelected.map((ele:any)=> ele=ele.title)    
+    var text=text1 +" " +text2 + " " +  JSON.stringify(this.serv.formReservation)+ " "+JSON.stringify( text3);
     var email=this.formReserv.value.email+""+this.formReservMobile.value.Email+""
     console.log(text)
     console.log(email)
@@ -170,7 +190,7 @@ export class SliderFormReservComponent implements OnInit {
       text:text
     })
     this.serv.isReservConfirmed = true
-
+    this.serv.isReservOpened=false
     setTimeout(()=>{
       this.serv.isReservConfirmed = false
     },3300)

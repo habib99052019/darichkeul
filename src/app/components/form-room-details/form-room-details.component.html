@@ -4,15 +4,15 @@
       <div class="input1_wrapper">
         <label>Date d'arrivée</label>
         <div class="input1_inner">
-          <input type="text" id="start-date" class="form-control input datepicker" placeholder="Date d'arrivée">
+          <input type="text" id="start-date" readonly class="form-control input datepicker" placeholder="Date d'arrivée">
         </div>
       </div>
     </div>
     <div class="col-md-12">
       <div class="input1_wrapper">
-        <label>Date de depart</label>
+        <label>Date de départ</label>
         <div class="input1_inner">
-          <input type="text"  id="end-date" class="form-control input datepicker" placeholder="Date de depart">
+          <input type="text"  id="end-date" readonly class="form-control input datepicker" placeholder="Date de départ">
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
       <div class="select1_wrapper">
         <label>Adultes</label>
         <div class="select1_inner">
-          <select class="select2 select" style="width: 100%" (change)="selctAdults($event)">
+          <select class="select2 select" id="ad" style="width: 100%" >
             <option value="0">Adultes</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -34,7 +34,7 @@
       <div class="select1_wrapper">
         <label>Enfants</label>
         <div class="select1_inner">
-          <select class="select2 select" style="width: 100%" (change)="selctEnfants($event)">
+          <select class="select2 select" id="en" style="width: 100%" >
             <option value="0">Enfants</option>
             <option value="1">1</option>
             <option value="2">2</option>

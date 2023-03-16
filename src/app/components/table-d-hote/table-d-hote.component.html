@@ -17,14 +17,38 @@
             </div>
         </div>
     </div>
+
+    <section class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
+                    <div class="section-subtitle">Dar ichkeul</div>
+                    <div class="section-title">Table d'hôte</div>
+                    <p>Dar Ichkeul vous offre le calme et la beauté de la nature, pour vous permettre de vous détendre,vous ressourcer et passer d'agréables moments en famille ou entre amis.Vous y serez chaleureusement accueillis, nous vous souhaitons à tous, la bienvenue.</p>
+                    <!-- reservation -->
+                    <div class="reservations">
+                        <div class="icon"><span class="flaticon-call"></span></div>
+                        <div class="text">
+                            <p>Réservation</p> <a href="tel:+21627595239">+216 27 595 239</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp"> <img src="assets/img/photos_new_content/new/image_67515137.jpg"
+                        alt="" class="mt-90 mb-30"> </div>
+                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp"> <img src="assets/img/photos_new_content/new/image_6483441_a.jpg"
+                        alt=""> </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section class="contact section-padding">
         <div class="container">
             <div class="row mb-90">
                 <div class="col-md-6 mb-60">
-                    <h3>Dar ichkeul</h3>
-                    <p>Le luxe et La nature</p>
-                    <p>Notre établissement se met à votre disposition pour vous offrir le moment d’évasion dont vous avez besoin. N’hésitez plus, et venez profiter de nos services.</p>
+                    <h3></h3>
+                    <p></p>
+                    <p></p>
                     <div class="reservations mb-30">
                         <div class="icon"><span class="flaticon-call"></span></div>
                         <div class="text">
@@ -54,18 +78,32 @@
                             </div>
                         </div>
                         <!-- form elements -->
-                        <div class="row form-table">
+                        <div class="row form-table" [formGroup]="user">
                             <div class="col-md-6 form-group">
-                                <input name="name" type="text" placeholder="Nom*" required>
+                                <input name="name" type="text" placeholder="Nom*" required formControlName="nom">
+                                <span *ngIf="user.controls.nom.hasError('required') && this.user.controls.nom.touched" style="color: red;">le nom obligatoire</span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="email" type="email" placeholder="Prénom*" required>
+                                <input name="email" type="text" placeholder="Prénom*" required formControlName="prenom">
+                                <span *ngIf="user.controls.prenom.hasError('required') && this.user.controls.prenom.touched" style="color: red;">le prenom obligatoire</span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="phone" type="text" placeholder=" Adresse email *" required>
+                                <input name="phone" type="email" placeholder=" Adresse email *" required formControlName="email">
+                                <span *ngIf="user.controls.email.hasError('required') && this.user.controls.email.touched" style="color: red;">email obligatoire</span>
+                                <span *ngIf="user.controls.email.hasError('email') && this.user.controls.email.touched" style="color: red;">email non exact</span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="subject" type="text" placeholder="Numéro de téléphone *" required>
+                                <input name="subject" type="text" placeholder="Numéro de téléphone *" required formControlName="phone">
+                                <span *ngIf="user.controls.phone.hasError('required') && this.user.controls.phone.touched" style="color: red;">phone obligatoire</span>
+                            </div>
+                            <div class="col-md-6" >
+                                <div class="input1_wrapper">
+                                  <label for="end-date">Date de réservation</label>
+                                  <div class="input1_inner">
+                               <input type="text" id="table" readonly class="form-control input datepicker" placeholder="Date réservation">
+                                  </div>
+                    
+                                </div>
                             </div>
 							<div class="col-md-6">
 								<div class="select1_wrapper">
@@ -83,7 +121,7 @@
 								</div>
 							</div>
                             <div class="col-md-12">
-                                <button type="submit" class="butn-dark2"><span>réserver</span></button>
+                                <button type="submit" class="butn-dark2" (click)="envoyer()"><span>réserver</span></button>
                             </div>
                         </div>
                     </form>
