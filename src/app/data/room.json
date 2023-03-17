@@ -260,7 +260,7 @@
         "title": "Ruppia",
         "price": 245,
         "period": "Nuit",
-        "presonneMax":3,
+        "presonneMax":4,
         "category": [
             4
         ],
@@ -431,7 +431,7 @@
         "id": 6,
         "title": "Colony",
         "price": 385,
-        "presonneMax":4,
+        "presonneMax":6,
         "period": "Nuit",
         "category": [
             2
@@ -523,8 +523,8 @@
         "category": [
             2
         ],
-        "gridimage": "assets/img/photos_new_content/marabou/image_67164929.JPG",
-        "listimage": "assets/img/photos_new_content/marabou/image_67164929.JPG",
+        "gridimage": "assets/img/photos_new_content/marabou/marabou2.jpg",
+        "listimage": "assets/img/photos_new_content/marabou/marabou2.jpg",
         "sliderimage": ["assets/img/photos_new_content/marabou/image_67164929.JPG"],
         "text": "Suite Vue sur la Piscine",
         "longdesc": "<p>Une suite vue sur la Piscine vous offre le calme et la beauté de la nature</p>",

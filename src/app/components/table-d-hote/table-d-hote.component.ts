@@ -23,7 +23,11 @@ export class TableDHoteComponent implements OnInit {
       text:text1,
       email:this.user.value.email
     }) 
-    alert("votre réservation confirmer")
+  this.api.isReservConfirmed = true
+  this.api.isReservOpened=false
+  setTimeout(()=>{
+    this.api.isReservConfirmed = false
+  },3300)
 }
   ngOnInit(): void {
     this.date=document.getElementById("table")

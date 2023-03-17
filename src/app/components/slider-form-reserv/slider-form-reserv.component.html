@@ -9,7 +9,7 @@
                 <div class="details">
                     <div class="room-name">{{item.title}}</div>
                     <div class="price"><span>{{item.price}}</span> DT / {{item.period}}</div>
-                    <div class="description">{{item.longdesc}}</div>
+                    <div class="description" [innerHTML]="item.longdesc"></div>
                 </div>
                 <div class="check-btn" (click)="checkRoom(item)" [id]="'room-slide-'+item.id"><i class="fa-solid fa-check"></i></div>
             </div>
