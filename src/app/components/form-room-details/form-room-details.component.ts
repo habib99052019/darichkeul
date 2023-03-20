@@ -86,13 +86,23 @@ export class FormRoomDetailsComponent implements OnInit {
         alert("les nombres des personnes sont supérieur a la capacité de suites veuiller choisir d'autres suites ")
       }
       else{
-        this.step++
-        this.apiService.formReservation={
-          dateStrat:this.dateArriver.value,
-          dateFin:this.dateFin.value,
-          childrens:this.childrens.value,
-          adults:this.adults.value,
-         }
+        this.checkIn = document.getElementById("start-date")
+        this.checkOut = document.getElementById("end-date")
+        this.adult = document.getElementById("ad")
+        this.children = document.getElementById("en")
+
+        if(this.checkIn.value === "" || this.checkOut.value === "" ){
+          alert("Tous les champs sont obligatoires")
+        }else{
+          this.step++
+          this.apiService.formReservation={
+            dateStrat:this.dateArriver.value,
+            dateFin:this.dateFin.value,
+            childrens:this.childrens.value,
+            adults:this.adults.value,
+           }
+        }
+        
       }
       }
     
@@ -100,23 +110,33 @@ export class FormRoomDetailsComponent implements OnInit {
     this.step--
   }
 
-  confirmer(){
-    var text1=this.user.value.nom + " "  +this.user.value.prenom + " "+this.user.value.email+" " +this.user.value.phone
-  
+  checkIn:any
+  checkOut:any
+  adult:any
+  children:any
 
-   var text=text1 + " "+this.titleRoom+" " +  JSON.stringify(this.apiService.formReservation);
-    var email=this.user.value.email
-   console.log(text)
-    console.log(email)
-    this.apiService.sendEmail({
-      email:email,
-      text:text
-    })
-    this.apiService.isReservConfirmed = true
-    
-    setTimeout(()=>{
-      this.apiService.isReservConfirmed = false
-    },3300)
+  confirmer(){
+    if(!this.user.valid){
+      alert("tout les champ obligatoires")
+    }
+    if(this.user.valid){
+
+      var text1=this.user.value.nom + " "  +this.user.value.prenom + " "+this.user.value.email+" " +this.user.value.phone
+      var text=text1 + " "+this.titleRoom+" " +  JSON.stringify(this.apiService.formReservation);
+      var email=this.user.value.email
+      console.log(text)
+      console.log(email)
+      this.apiService.sendEmail({
+        email:email,
+        text:text
+      })
+      this.apiService.isReservConfirmed = true
+
+      setTimeout(()=>{
+        this.apiService.isReservConfirmed = false
+      },3300)
+    }
+
   }
 
 

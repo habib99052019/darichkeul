@@ -15,6 +15,7 @@ constructor(private route: ActivatedRoute) { }
 
   routeSub:any
   titleRoom:any
+  titleRoom2:any
   roomList = rooms
   room_selected:any = []
 
@@ -27,6 +28,7 @@ constructor(private route: ActivatedRoute) { }
       if(item.id === id){
         this.room_selected.push(item)
         this.titleRoom=item.title
+        this.titleRoom2=item.title2
         //this.tabPresonnes=item.prixChambres
 
       }

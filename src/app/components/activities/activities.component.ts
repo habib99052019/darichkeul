@@ -52,7 +52,7 @@ export class ActivitiesComponent implements OnInit {
     {
       title:"PISCINE",
       //image:"https://blog.cap-adrenaline.com/wp-content/uploads/2022/03/equipement-cours-equitation.jpg",
-      image:"assets/img/photos_new_content/les_slides/2d396e4f-86c9-4161-8d10-b06dded9ce67.jpg",
+      image:"assets/img/photos_new_content/piscine/51438b0f-322f-4afe-a1ad-9952e45c85ec.jfif",
       description:"En famille, en couple ou seul, venez profiter de la piscine extérieure. Vous pouvez vous prélasser sous le soleil, accompagné d’un livre et d’une boisson rafraîchissante. Durant la saison estivale ou les journées ensoleillées, accordez-vous un moment de pur farniente au bord de notre piscine.",
       period:"daily",
       start_at:"07",
@@ -85,7 +85,7 @@ export class ActivitiesComponent implements OnInit {
     {
       title:"RANDONNÉE",
       //image:"https://blog.cap-adrenaline.com/wp-content/uploads/2022/03/equipement-cours-equitation.jpg",
-      image:"assets/img/photos_new_content/les_slides/178483159_751807848867108_6722969823734392856_n.jpg",
+      image:"assets/img/photos_new_content/new/rondonné3.jpg",
       description:"Nos randonnées accompagnées sont placées sous le signe de la convivialité et de l’exploration. Que vous ayez envie de bien-être, de découverte ou d’aventure, partez en petit groupe découvrir les richesses de la  région de Mateur .  Nos guides  partageront avec vous leurs mille et une connaissances de la resplendissante nature campagnarde.",
       period:"daily",
       start_at:"07",

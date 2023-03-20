@@ -178,25 +178,58 @@ export class SliderFormReservComponent implements OnInit {
   }
 
   confirmReservation(){
-    var text1=this.formReserv.value.nom + " "  +this.formReserv.value.prenom + " "+this.formReserv.value.email+" " +this.formReserv.value.mobile
-    var text2=this.formReservMobile.value.Nom + " "  +this.formReservMobile.value.Prenom + " "+this.formReservMobile.value.Email+" " +this.formReservMobile.value.Mobile
-    var text3=this.listRoomsSelected.map((ele:any)=> ele=ele.title)    
-    var text=text1 +" " +text2 + " " +  JSON.stringify(this.serv.formReservation)+ " "+JSON.stringify( text3);
-    var email=this.formReserv.value.email+""+this.formReservMobile.value.Email+""
-    console.log(text)
-    console.log(email)
-    this.serv.sendEmail({
-      email:email,
-      text:text
-    })
-    this.serv.isReservConfirmed = true
-    this.serv.isReservOpened=false
-    setTimeout(()=>{
-      this.serv.isReservConfirmed = false
-    },3300)
+    if(this.formReserv.valid){
+      var text1=this.formReserv.value.nom + " "  +this.formReserv.value.prenom + " "+this.formReserv.value.email+" " +this.formReserv.value.mobile
+      var text2=this.formReservMobile.value.Nom + " "  +this.formReservMobile.value.Prenom + " "+this.formReservMobile.value.Email+" " +this.formReservMobile.value.Mobile
+      var text3=this.listRoomsSelected.map((ele:any)=> ele=ele.title)    
+      var text=text1 +" " +text2 + " " +  JSON.stringify(this.serv.formReservation)+ " "+JSON.stringify( text3);
+      var email=this.formReserv.value.email+""+this.formReservMobile.value.Email+""
+      console.log(text)
+      console.log(email)
+      this.serv.sendEmail({
+        email:email,
+        text:text
+      })
+      this.serv.isReservConfirmed = true
+      this.serv.isReservOpened=false
+      setTimeout(()=>{
+        this.serv.isReservConfirmed = false
+      },3300)
+    }
+
+  
+    if(this.formReserv.valid==false){
+      alert("tout les  champs obligatoire")
+    }
+   
   }
 
+  confirmReservationMobile(){
+   
 
+    if(this.formReservMobile.valid){
+      var text1=this.formReserv.value.nom + " "  +this.formReserv.value.prenom + " "+this.formReserv.value.email+" " +this.formReserv.value.mobile
+      var text2=this.formReservMobile.value.Nom + " "  +this.formReservMobile.value.Prenom + " "+this.formReservMobile.value.Email+" " +this.formReservMobile.value.Mobile
+      var text3=this.listRoomsSelected.map((ele:any)=> ele=ele.title)    
+      var text=text1 +" " +text2 + " " +  JSON.stringify(this.serv.formReservation)+ " "+JSON.stringify( text3);
+      var email=this.formReserv.value.email+""+this.formReservMobile.value.Email+""
+      console.log(text)
+      console.log(email)
+      this.serv.sendEmail({
+        email:email,
+        text:text
+      })
+      this.serv.isReservConfirmed = true
+      this.serv.isReservOpened=false
+      setTimeout(()=>{
+        this.serv.isReservConfirmed = false
+      },3300)
+    }
+   
+    if(this.formReservMobile.valid==false){
+      alert("tout les champs sont obligatoires")
+    }
+  }
   ngOnInit(): void {
 
     $(document).ready(()=>{

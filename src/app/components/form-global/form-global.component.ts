@@ -30,7 +30,10 @@ export class FormGlobalComponent implements OnInit {
  dateFin:any
  adults:any
   childrens:any
-  
+  checkIn:any
+  checkOut:any
+  adult:any
+  children:any
   //date d'arrrivé // [min]="todayDate" class="date-picker-no-show" (dateChange)="this.getDateDebutValue($event,dateDebutMobile)"  [matDatepickerFilter]="DateNoDispoFilter2"
   // date de depare // [min]="DateArr" [max]="maxResvation" class="date-picker-no-show" (dateChange)="this.getDateFinValue($event,dateFinMobile)"
   DateNoDispoFilter2= (d: Date): boolean => {
@@ -57,89 +60,83 @@ export class FormGlobalComponent implements OnInit {
 
     var i=0
     var j=0
-
-
+    var ku=0
+  var tabNouveaux:any=[]
     this.tabMax=[]
     this.tabSuitesDisponn=[]
-    /*var d = new Date(new Date(d1)+"")
-
-    var dt_Date = (d.getDate() < 10) ? '0' + d.getDate() : d.getDate();
-    var dt_Month = ((d.getMonth()+1) < 10) ? '0' + (d.getMonth()+1) : (d.getMonth()+1);
-    var dt_Year = (d.getFullYear() < 10) ? '0' + d.getFullYear() : d.getFullYear();
-
-    var date_final = [dt_Date, dt_Month, dt_Year].join('/')
-
-
-    dateInput.value = date_final+""
-    this.arriver=date_final+""*/
     var Ar=this.dateArrive.value.toString()
-    var fin=this.dateFin.value.toString()
+  var fin=this.dateFin.value.toString()
 
 
-    var t1=Ar.split('/')
+  var t1=Ar.split('/')
   var t2=fin.split('/')
  var  d1=t1[1]+"/"+t1[0]+"/"+t1[2]
  var  d2=t2[1]+"/"+t2[0]+"/"+t2[2]
-      //console.log(new Date(d1),'valueee')
 
 
 
-
+   
+    console.log(this.suites)
       this.DateArr=new Date(new Date(d1).setDate(new Date(d1).getDate() + 1));
-      //console.log( this.DateArr,"date d'arriver")
+      
+
         this.suites.forEach(async (ele)=>{
-          //console.log(ele,'ele de suite')
+
+          console.log(i+1,'ele de suite')
 
           var tab:any[]=[]
-          tab=Array.prototype.concat.apply([], ele.history).map(ele=>new Date (ele.slice(0,10)).getTime()).sort((a , b) => a-b);
-          var revSuites={
+          tab=Array.prototype.concat.apply([], ele.history).map(ele=>ele.slice(0,10));
+           var tab2=tab.map(ele=>new Date(ele).getTime()).sort((a , b) => a-b)
+            console.log(tab,'rryuoppop')
+          var  revSuites={
             suite:ele.suit,
-            tabDate:tab
+            tab:tab,
+           
+           // tabDate:tab2
+            
           }
-          //console.log(revSuites , j+1, "revSuites")
-           var test =revSuites.tabDate.some(ele=>ele  > this.DateArr.getTime())
-          if(test ==true){
-            var rev=revSuites.tabDate.find(ele=>ele  > this.DateArr.getTime())
-            //console.log(ele,'kaka')
-            var obj={
-              suite:ele.suit,
-              reservationMax:new Date(rev)
-            }
-            //console.log(obj,'kikou')
+           var dateDep=Ar.split("/").reverse().join("-")
+          //  var test =revSuites.tabDate.some(ele=>ele  > this.DateArr.getTime())
+           console.log(dateDep,"erty")
+           console.log(revSuites.tab,'nn')
+        
+          if( revSuites.tab.filter(ele=>ele ==dateDep).length == 0){
+         //   var rev=revSuites.tabDate.find(ele=>ele  > this.DateArr.getTime())
+         
+        var  revSuitesUpdate=   {
+          suite:ele.suit,
+          tabDate:revSuites.tab,
+          tab2:revSuites.tab.map(ele=>new Date(ele).getTime()).sort((a , b) => a-b).filter(ele=> ele >new Date(dateDep).getTime()),
+          tab3:revSuites.tab.sort((a,b)=>new Date(a).getTime()- new Date(b).getTime()).filter(ele=>(new Date(ele).getTime()>new Date(dateDep).getTime()))
+      }
+          tabNouveaux.push(revSuitesUpdate)
+
+
+         
 
 
 
 
-             //console.log( i=i+1,"crono")
-             //console.log(rev,"ooooo")
-           await  this.tabMax.push(obj)
+           }
+         
 
 
 
 
-          }
-          if( test ==false)
-          {
-            //console.log(i,"crono2")
 
-             var obj1={
-              suite:ele.suit,
-              reservationMax:new Date('12/12/2027')
-            }
-           await  this.tabMax.push(obj1)
-          }
 
         })
-        //console.log(this.tabMax,"fin")
-        //console.log(this.tabMax,"fin2")
-        //console.log(this.maxResvation,"aaa")
-        //console.log(this.tabMax.sort((a ,  b) => b.reservationMax.getTime()  - a.reservationMax.getTime()  ),'desd')
-        this.maxResvation=this.tabMax.sort((a ,  b) => b.reservationMax.getTime()  - a.reservationMax.getTime()  )[0].reservationMax
-        //console.log(this.maxResvation,'bbb')
+        for (let i = 0; i < tabNouveaux.length; i++) {
+             console.log(new Date(tabNouveaux[i].tab3[0]),tabNouveaux[i].suite.title,new Date(tabNouveaux[i].tab3[0]).getTime(),"ppo")
+             console.log(new Date(d2),new Date(d2).getDate(),"ppot")
+         if(new Date(tabNouveaux[i].tab3[0]).getTime()> new Date(fin.split("/").reverse().join("-")).getTime()  )
+           {
+            this.tabSuitesDisponn.push(tabNouveaux[i])
+           }
+        }
+       console.log(this.tabSuitesDisponn,'rrry')
 
-        this.tabSuitesDisponn=this.tabMax.filter(ele=>ele.reservationMax.getTime() >= new Date(d2).getTime())
-        //console.log(this.tabSuitesDisponn,"kk")
-
+      
         var roomsList:any = []
         var roomsFiltered = this.tabSuitesDisponn.map((room:any)=>room.suite)
 
@@ -151,20 +148,32 @@ export class FormGlobalComponent implements OnInit {
         
         this.apiService.roomsListFilter = roomsList
 
-        this.apiService.isReservOpened = true
+        this.checkIn = document.getElementById("checkin")
+        this.checkOut = document.getElementById("checkout")
+        this.adult = document.getElementById("ad")
+        this.children = document.getElementById("en")
+      
+        if(this.checkIn.value === "" || this.checkOut.value === "" ){
+          alert("Tous les champs sont obligatoires")
+        }else{
+          this.apiService.isReservOpened = true
+        }
 
         //console.log(this.apiService.roomsListFilter)
 
     this.adults =document.getElementById("ad")
     this.childrens=document.getElementById("en")
      this.apiService.formReservation={
-      dateStrat:d1,
-      dateFin:d2,
+      dateStrat:this.dateArrive.value.toString(),
+      dateFin:this.dateFin.value.toString(),
+   
       childrens:this.adults.value,
-          adults:this.childrens.value
+      adults:this.childrens.value
      }
-  console.log(this.apiService.formReservation)
+  console.log(this.apiService.formReservation,'rrr')
   }
+
+ 
 
   // getDateFinValue(e:any,dateInput:any){
 

@@ -2,6 +2,7 @@
     {
         "id": 1 ,
         "title": "Bonnelli",
+        "title2": "Bonnelli",
         "price": 210,
         "period": "Nuit",
         "presonneMax":2,
@@ -87,7 +88,8 @@
     },
     {
         "id": 2,
-        "title": "Cigogne",
+        "title": "Cicogne",
+        "title2":"Cigogne",
         "price": 265,
         "period": "Nuit",
         "presonneMax":2,
@@ -173,6 +175,7 @@
     {
         "id": 3,
         "title": "Amorpha",
+        "title2": "Amorpha",
         "price": 245,
         "period": "Nuit",
         "presonneMax":2,
@@ -258,6 +261,7 @@
     {
         "id": 4,
         "title": "Ruppia",
+        "title2": "Ruppia",
         "price": 245,
         "period": "Nuit",
         "presonneMax":4,
@@ -344,6 +348,7 @@
     {
         "id": 5,
         "title": "Ciconia",
+        "title2": "Ciconia",
         "price": 230,
         "period": "Nuit",
         "presonneMax":2,
@@ -430,6 +435,7 @@
     {
         "id": 6,
         "title": "Colony",
+        "title2": "Colony",
         "price": 385,
         "presonneMax":6,
         "period": "Nuit",
@@ -517,6 +523,7 @@
     {
         "id": 7,
         "title": "Marabou",
+        "title2": "Marabou",
         "price": 300,
         "period": "Nuit",
         "presonneMax":2,
@@ -602,14 +609,15 @@
     {
         "id": 8,
         "title": "Brecon",
+        "title2": "Brecon",
         "price": 335,
         "period": "Nuit",
         "presonneMax":2,
         "category": [
             2
         ],
-        "gridimage": "assets/img/photos_new_content/brecon/C85A6495.jpg",
-        "listimage": "assets/img/photos_new_content/brecon/C85A6495.jpg",
+        "gridimage": "assets/img/photos_new_content/brecon/C85A6572.jpg",
+        "listimage": "assets/img/photos_new_content/brecon/C85A6572.jpg",
         "sliderimage": ["assets/img/photos_new_content/brecon/C85A6495.jpg","assets/img/photos_new_content/brecon/C85A6570.jpg","assets/img/photos_new_content/brecon/C85A6572.jpg","assets/img/photos_new_content/brecon/C85A6577.jpg"],
         "text": "Suite De Luxe avec Vue panoramique",
         "longdesc": "<p>Suite De Luxe avec Vue panoramique un suite moderne et luxueux baigné de lumière naturelle, offrant un intérieur chaleureux et apaisant avec un fabuleux paysage, vous permet de contempler la beauté de la ville, de jour comme de nuit</p>",

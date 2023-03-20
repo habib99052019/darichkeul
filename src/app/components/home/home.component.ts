@@ -77,7 +77,7 @@ export class HomeComponent implements OnInit {
     {
       title:"PISCINE",
       //image:"https://blog.cap-adrenaline.com/wp-content/uploads/2022/03/equipement-cours-equitation.jpg",
-      image:"assets/img/photos_new_content/les_slides/2d396e4f-86c9-4161-8d10-b06dded9ce67.jpg",
+      image:"assets/img/photos_new_content/piscine/08cb2d96-006c-4661-bec5-add6dc13cbd5.jfif",
       description:"En famille, en couple ou seul, venez profiter de la piscine extérieure. Vous pouvez vous prélasser sous le soleil, accompagné d’un livre et d’une boisson rafraîchissante. Durant la saison estivale ou les journées ensoleillées, accordez-vous un moment de pur farniente au bord de notre piscine.",
       period:"daily",
       start_at:"07",
@@ -110,7 +110,7 @@ export class HomeComponent implements OnInit {
     {
       title:"RANDONNÉE",
       //image:"https://blog.cap-adrenaline.com/wp-content/uploads/2022/03/equipement-cours-equitation.jpg",
-      image:"assets/img/photos_new_content/les_slides/178483159_751807848867108_6722969823734392856_n.jpg",
+      image:"assets/img/photos_new_content/new/rondonné3.jpg",
       description:"Nos randonnées accompagnées sont placées sous le signe de la convivialité et de l’exploration. Que vous ayez envie de bien-être, de découverte ou d’aventure, partez en petit groupe découvrir les richesses de la  région de Mateur .  Nos guides  partageront avec vous leurs mille et une connaissances de la resplendissante nature campagnarde.",
       period:"daily",
       start_at:"07",
@@ -173,8 +173,8 @@ export class HomeComponent implements OnInit {
   async  check(){
     var i=0
     var j=0
-
-
+    var ku=0
+  var tabNouveaux:any=[]
     this.tabMax=[]
     this.tabSuitesDisponn=[]
     var Ar=this.dateArrive.value.toString()
@@ -188,45 +188,50 @@ export class HomeComponent implements OnInit {
 
 
 
-
+   
+    console.log(this.suites)
       this.DateArr=new Date(new Date(d1).setDate(new Date(d1).getDate() + 1));
+      
+
         this.suites.forEach(async (ele)=>{
-          console.log(ele,'ele de suite')
+
+          console.log(i+1,'ele de suite')
 
           var tab:any[]=[]
-          tab=Array.prototype.concat.apply([], ele.history).map(ele=>new Date (ele.slice(0,10)).getTime()).sort((a , b) => a-b);
-          var revSuites={
+          tab=Array.prototype.concat.apply([], ele.history).map(ele=>ele.slice(0,10));
+           var tab2=tab.map(ele=>new Date(ele).getTime()).sort((a , b) => a-b)
+            console.log(tab,'rryuoppop')
+          var  revSuites={
             suite:ele.suit,
-            tabDate:tab
+            tab:tab,
+           
+           // tabDate:tab2
+            
           }
-           var test =revSuites.tabDate.some(ele=>ele  > this.DateArr.getTime())
-          if(test ==true){
-            var rev=revSuites.tabDate.find(ele=>ele  > this.DateArr.getTime())
-            var obj={
-              suite:ele.suit,
-              reservationMax:new Date(rev)
-            }
-            console.log(obj,'kikou')
+           var dateDep=Ar.split("/").reverse().join("-")
+          //  var test =revSuites.tabDate.some(ele=>ele  > this.DateArr.getTime())
+           console.log(dateDep,"erty")
+           console.log(revSuites.tab,'nn')
+        
+          if( revSuites.tab.filter(ele=>ele ==dateDep).length == 0){
+         //   var rev=revSuites.tabDate.find(ele=>ele  > this.DateArr.getTime())
+         
+        var  revSuitesUpdate=   {
+          suite:ele.suit,
+          tabDate:revSuites.tab,
+          tab2:revSuites.tab.map(ele=>new Date(ele).getTime()).sort((a , b) => a-b).filter(ele=> ele >new Date(dateDep).getTime()),
+          tab3:revSuites.tab.sort((a,b)=>new Date(a).getTime()- new Date(b).getTime()).filter(ele=>(new Date(ele).getTime()>new Date(dateDep).getTime()))
+      }
+          tabNouveaux.push(revSuitesUpdate)
+
+
+         
 
 
 
 
-             console.log( i=i+1,"crono")
-             console.log(rev,"ooooo")
-           await  this.tabMax.push(obj)
-
-
-
-
-          }
-          if( test ==false)
-          {
-             var obj1={
-              suite:ele.suit,
-              reservationMax:new Date('12/12/2027')
-            }
-           await  this.tabMax.push(obj1)
-          }
+           }
+         
 
 
 
@@ -234,16 +239,19 @@ export class HomeComponent implements OnInit {
 
 
         })
-        console.log(this.tabMax,"fin")
-        console.log(this.tabMax,"fin2")
-        console.log(this.maxResvation,"aaa")
-        console.log(this.tabMax.sort((a ,  b) => b.reservationMax.getTime()  - a.reservationMax.getTime()  ),'desd')
-        this.maxResvation=this.tabMax.sort((a ,  b) => b.reservationMax.getTime()  - a.reservationMax.getTime()  )[0].reservationMax
-        console.log(this.maxResvation,'bbb')
+        for (let i = 0; i < tabNouveaux.length; i++) {
+             console.log(new Date(tabNouveaux[i].tab3[0]),tabNouveaux[i].suite.title,new Date(tabNouveaux[i].tab3[0]).getTime(),"ppo")
+             console.log(new Date(d2),new Date(d2).getDate(),"ppot")
+         if(new Date(tabNouveaux[i].tab3[0]).getTime()> new Date(fin.split("/").reverse().join("-")).getTime()  )
+           {
+            this.tabSuitesDisponn.push(tabNouveaux[i])
+           }
+        }
+       console.log(this.tabSuitesDisponn,'rrry')
 
-        this.tabSuitesDisponn=this.tabMax.filter(ele=>ele.reservationMax.getTime() >= new Date(d2).getTime())
-        console.log(this.tabSuitesDisponn,"kk")
-        var roomsList:any = []
+      
+      
+      var roomsList:any = []
         var roomsFiltered = this.tabSuitesDisponn.map((room:any)=>room.suite)
 
         roomsFiltered.map((r:any)=>{
@@ -254,11 +262,20 @@ export class HomeComponent implements OnInit {
         
         this.apiService.roomsListFilter = roomsList
 
-        this.apiService.isReservOpened = true
+        this.checkIn = document.getElementById("checkin")
+        this.checkOut = document.getElementById("checkout")
+        this.adult = document.getElementById("ad")
+        this.children = document.getElementById("en")
+
+        if(this.checkIn.value === "" || this.checkOut.value === "" ){
+          alert("Tous les champs sont obligatoires")
+        }else{
+          this.apiService.isReservOpened = true
+        }
 
         this.apiService.formReservation={
-          dateStrat:d1,
-          dateFin:d2,
+          dateStrat:this.dateArrive.value.toString(),
+          dateFin:this.dateFin.value.toString(), 
           childrens:this.apiService.enfant.value,
           adults:this.apiService.adultes.value
          }
@@ -267,6 +284,11 @@ export class HomeComponent implements OnInit {
     
 
   }
+
+  checkIn:any
+  checkOut:any
+  adult:any
+  children:any
 
   // getDateFinValue(e:any,dateInput:any){
 

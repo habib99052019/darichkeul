@@ -7,7 +7,7 @@
             <div class="room-item" *ngFor="let item of serv.roomsListFilter">
                 <img [src]="item.gridimage" />
                 <div class="details">
-                    <div class="room-name">{{item.title}}</div>
+                    <div class="room-name">{{item.title2}}</div>
                     <div class="price"><span>{{item.price}}</span> DT / {{item.period}}</div>
                     <div class="description" [innerHTML]="item.longdesc"></div>
                 </div>
@@ -44,7 +44,7 @@
                     <br>
                     <input type="text" placeholder="Numéro de téléphone" (input)="validPhone($event)"  formControlName="mobile">
                 </div>
-                <div class="confirm-btn" (click)="confirmReservation()">confirmer</div>
+                <div class="confirm-btn"  (click)="confirmReservation()">confirmer</div>
             </div>
         </div>
     </div>
@@ -96,7 +96,7 @@
                     <br>
                     <input type="text" placeholder="Numéro de téléphone" (input)="validPhone($event)" formControlName="Mobile">
                 </div>
-                <div class="confirm-btn" (click)="confirmReservation()">confirmer</div>
+                <div class="confirm-btn"  (click)="confirmReservationMobile()">confirmer</div>
             </div>
         </div>
     </div>

@@ -23,7 +23,8 @@ const routes: Routes = [
   {path: 'room/:id', component: RoomDetailsComponent },
   {path: 'ferme', component: FermeComponent },
   {path: 'slider', component: SliderFormReservComponent },
-  {path: "table-d'hote", component: TableDHoteComponent }
+  {path: "table-d'hote", component: TableDHoteComponent },
+  {path: "**", component: HomeComponent } 
 
 ];
 
