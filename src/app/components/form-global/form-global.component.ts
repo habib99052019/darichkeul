@@ -153,7 +153,7 @@ export class FormGlobalComponent implements OnInit {
         this.adult = document.getElementById("ad")
         this.children = document.getElementById("en")
       
-        if(this.checkIn.value === "" || this.checkOut.value === "" ){
+        if(this.checkIn.value === "" || this.checkOut.value === "" || this.adult.value === "0"){
           alert("Tous les champs sont obligatoires")
         }else{
           this.apiService.isReservOpened = true

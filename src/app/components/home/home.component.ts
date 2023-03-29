@@ -267,7 +267,7 @@ export class HomeComponent implements OnInit {
         this.adult = document.getElementById("ad")
         this.children = document.getElementById("en")
 
-        if(this.checkIn.value === "" || this.checkOut.value === "" ){
+        if(this.checkIn.value === "" || this.checkOut.value === "" || this.adult.value === "0"){
           alert("Tous les champs sont obligatoires")
         }else{
           this.apiService.isReservOpened = true
@@ -278,7 +278,7 @@ export class HomeComponent implements OnInit {
           dateFin:this.dateFin.value.toString(), 
           childrens:this.apiService.enfant.value,
           adults:this.apiService.adultes.value
-         }
+        }
     console.log(this.apiService.formReservation,"jjjj")
 
     

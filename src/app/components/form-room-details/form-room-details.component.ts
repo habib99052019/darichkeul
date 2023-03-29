@@ -91,7 +91,7 @@ export class FormRoomDetailsComponent implements OnInit {
         this.adult = document.getElementById("ad")
         this.children = document.getElementById("en")
 
-        if(this.checkIn.value === "" || this.checkOut.value === "" ){
+        if(this.checkIn.value === "" || this.checkOut.value === "" || this.adult.value === "0"){
           alert("Tous les champs sont obligatoires")
         }else{
           this.step++
@@ -126,11 +126,25 @@ export class FormRoomDetailsComponent implements OnInit {
       var email=this.user.value.email
       console.log(text)
       console.log(email)
-      this.apiService.sendEmail({
-        email:email,
-        text:text
+     
+   
+    var data= {
+      first_name:this.user.value.nom,
+      last_name:this.user.value.prenom,
+      email:this.user.value.email,
+      startDate:this.dateArriver.value,
+      endDate:this.dateFin.value,
+       number_phone:this.user.value.phone,
+      roomType:"all",
+     name:this.titleRoom,
+      number_persons:Number(this.adults.value)+ Number(this.childrens.value)
+      
+     
+    }
+    console.log(data,"er")
+      this.apiService.reservationEnligneAndSendEmail(data).subscribe(res=>{
+        console.log(res.valueOf())
       })
-      this.apiService.isReservConfirmed = true
 
       setTimeout(()=>{
         this.apiService.isReservConfirmed = false

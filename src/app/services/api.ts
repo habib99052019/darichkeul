@@ -65,7 +65,7 @@ export class ApiService {
   // }
   // Offers
   public sendEmail(form:any){
-    this.http.post('https://heart-of-carthage-dubai.com/backend/email/send-mail-ichkel/',form).subscribe(res=>{
+    this.http.post('https://heart-of-carthage-dubai.com/backend/email/send-mail-ichkel1/',form).subscribe(res=>{
       console.log(res)})
   }
   public getOffer() {
@@ -117,6 +117,9 @@ export class ApiService {
   reservationEnligneAndSendEmail(data : any){
     return this.http.post("https://heart-of-carthage-dubai.com/backend/mail/send-mail6", data)
   }*/
+  reservationEnligneAndSendEmail(data : any){
+    return this.http.post(this.ApiPath + '/send', data)
+  }
 
 
 }

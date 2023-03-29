@@ -87,7 +87,7 @@
     position: relative;
     margin-bottom: 3%;
     width: 100%;
-    height: 40%;
+    height: 52%;
 
 }
 
@@ -148,12 +148,24 @@
 .form-reservation .content .rooms-list .room-item .details .description{
 
 	font-size: 1vw !important;
+	display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 57px;
 
 }
 
 .form-reservation .content .rooms-list .room-item .details .description p{
 
 	font-size: 1vw !important;
+
+}
+
+.form-reservation .content .rooms-list .room-item .details .price-item{
+
+	font-size: 1.2vw;
 
 }
 
@@ -417,7 +429,7 @@
 .form-reserv-mobile .content .rooms-list .room-item .details .price{
 
 	position: absolute;
-	top: 64%;
+	top: 65%;
 	right: 6%;
 	font-size: 18px;
 
@@ -435,6 +447,11 @@
 
 }
 
+.form-reserv-mobile .content .rooms-list .room-item .details .price-item{
+
+	font-size: 19px;
+
+}
 
 .form-user-mobile{
 	display: flex;

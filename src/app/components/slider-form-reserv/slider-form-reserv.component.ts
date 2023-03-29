@@ -186,10 +186,24 @@ export class SliderFormReservComponent implements OnInit {
       var email=this.formReserv.value.email+""+this.formReservMobile.value.Email+""
       console.log(text)
       console.log(email)
-      this.serv.sendEmail({
-        email:email,
-        text:text
-      })
+     
+      var data= {
+        first_name:this.formReserv.value.nom,
+        last_name:this.formReserv.value.prenom,
+        email:this.formReserv.value.email,
+        startDate:this.serv.formReservation.dateStrat,
+        endDate:this.serv.formReservation.dateFin,
+         number_phone:this.formReserv.value.mobile,
+        roomType:"all",
+       name:text3,    
+        number_persons:Number(this.serv.formReservation.childrens)+ Number(this.serv.formReservation.adults)
+        
+       
+      }
+      console.log(data,"er")
+        this.serv.reservationEnligneAndSendEmail(data).subscribe(res=>{
+          console.log(res.valueOf())
+        })
       this.serv.isReservConfirmed = true
       this.serv.isReservOpened=false
       setTimeout(()=>{
@@ -215,10 +229,24 @@ export class SliderFormReservComponent implements OnInit {
       var email=this.formReserv.value.email+""+this.formReservMobile.value.Email+""
       console.log(text)
       console.log(email)
-      this.serv.sendEmail({
-        email:email,
-        text:text
-      })
+     
+      var data= {
+        first_name:this.formReservMobile.value.Nom,
+        last_name:this.formReservMobile.value.Prenom,
+        email:this.formReservMobile.value.Email,
+        startDate:this.serv.formReservation.dateStrat,
+        endDate:this.serv.formReservation.dateFin,
+         number_phone:this.formReservMobile.value.Mobile,
+        roomType:"all",
+       name:text3,    
+        number_persons:Number(this.serv.formReservation.childrens)+ Number(this.serv.formReservation.adults)
+        
+       
+      }
+      console.log(data,"er")
+        this.serv.reservationEnligneAndSendEmail(data).subscribe(res=>{
+          console.log(res.valueOf())
+        })
       this.serv.isReservConfirmed = true
       this.serv.isReservOpened=false
       setTimeout(()=>{
