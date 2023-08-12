@@ -110,7 +110,7 @@ export class HomeComponent implements OnInit {
     {
       title:"RANDONNÉE",
       //image:"https://blog.cap-adrenaline.com/wp-content/uploads/2022/03/equipement-cours-equitation.jpg",
-      image:"assets/img/photos_new_content/new/rondonné3.jpg",
+      image:"assets/img/photos_sections/rondonne/r2.jpg",
       description:"Nos randonnées accompagnées sont placées sous le signe de la convivialité et de l’exploration. Que vous ayez envie de bien-être, de découverte ou d’aventure, partez en petit groupe découvrir les richesses de la  région de Mateur .  Nos guides  partageront avec vous leurs mille et une connaissances de la resplendissante nature campagnarde.",
       period:"daily",
       start_at:"07",

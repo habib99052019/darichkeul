@@ -3,7 +3,7 @@
         "id": 1 ,
         "title": "Bonnelli",
         "title2": "Bonnelli",
-        "price": 210,
+        "price": 350,
         "period": "Nuit",
         "presonneMax":2,
         "category": [
@@ -90,7 +90,7 @@
         "id": 2,
         "title": "Cicogne",
         "title2":"Cigogne",
-        "price": 265,
+        "price": 405,
         "period": "Nuit",
         "presonneMax":2,
         "category": [
@@ -176,7 +176,7 @@
         "id": 3,
         "title": "Amorpha",
         "title2": "Amorpha",
-        "price": 245,
+        "price": 385,
         "period": "Nuit",
         "presonneMax":2,
         "category": [
@@ -262,7 +262,7 @@
         "id": 4,
         "title": "Ruppia",
         "title2": "Ruppia",
-        "price": 245,
+        "price": 385,
         "period": "Nuit",
         "presonneMax":4,
         "category": [
@@ -349,7 +349,7 @@
         "id": 5,
         "title": "Ciconia",
         "title2": "Ciconia",
-        "price": 230,
+        "price": 370,
         "period": "Nuit",
         "presonneMax":2,
         "category": [
@@ -436,7 +436,7 @@
         "id": 6,
         "title": "Colony",
         "title2": "Colony",
-        "price": 385,
+        "price": 525,
         "presonneMax":6,
         "period": "Nuit",
         "category": [
@@ -524,7 +524,7 @@
         "id": 7,
         "title": "Marabou",
         "title2": "Marabou",
-        "price": 300,
+        "price": 440,
         "period": "Nuit",
         "presonneMax":2,
         "category": [
@@ -610,7 +610,7 @@
         "id": 8,
         "title": "Brecon",
         "title2": "Brecon",
-        "price": 335,
+        "price": 475,
         "period": "Nuit",
         "presonneMax":2,
         "category": [
