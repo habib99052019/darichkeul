@@ -198,6 +198,8 @@ export class FormGlobalComponent implements OnInit {
     this.dateFin=document.getElementById("checkout")
    
     this.apiService.getSingleSuiteToute().subscribe((res:any)=>{
+   
+
       var newArray = Array.prototype.concat.apply([], res);
       newArray=newArray.map(ele=>ele.slice(0,10))
       this.tabDate=newArray
